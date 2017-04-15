@@ -22,7 +22,7 @@
 					location.reload();
 			 	}
 			}
-			xhttp.setRequestHeader("Content-type", "application/json");
+			xHttp.setRequestHeader("Content-type", "application/json");
 			xHttp.open("POST")
 			xHttp.send(data);
 
