@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>quizApp</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
 <body>	
 	<header class="header-encabezado">
@@ -36,13 +37,44 @@
 					<div class="form-submit">
 						<button>INICIAR</button>
 					</div>
-					<div id="finestra-modal1" class="form-submit">
-						<button>REGISTRARSE</button>
+					<div id="finestra-modal-obrir1" class="finestra-modal-obrir1 boto1">
+						<a id="finestra-modal-obrir1" class="finestra-modal-obrir1 boto1">REGISTRARTE</a>
 					</div>			
 					
 				</div>
 			</form>
 		</div>
+		<div id=""> 
+			<div id="finestra-modal1" class="finestra-modal1">
+			  <div class="finestra-modal__contingut1">        
+			      <div id="finestra-modal-tancar1" class="finestra-modal-tancar1 boto1">×</div>    
+			      	<div>Registrate</div>
+					<form id="" >
+						<div class="form-register">
+							<p>Ingrese el Nombre</p>
+							<input type="text" placeholder="Nombre">
+						</div>
+						<div class="form-register">
+							<p>Ingrese el Apellido</p>
+							<input type="text" placeholder="Apellido">
+						</div>
+						<div class="form-register">
+							<p>Ingrese el Correo Electronico</p>
+							<input type="text" placeholder="Correo ELectronico">
+						</div>
+						<div class="form-register">
+							<p>Ingrese la Contrasena</p>
+							<input type="password" placeholder="Contrasena">
+						</div>
+						<div>
+							<input type="submit" name="Enviar" placeholder="Enviar">
+						</div>
+					</form>			      		
+			       </div>   
+			  </div>
+			</div>			
+		</div>
 	</div>
+	<script src="js/index.js"></script>
 </body>
 </html>
