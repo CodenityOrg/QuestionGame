@@ -6,14 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>	
-	<header class="header-encabezado">
-		<nav class="header-quiz">
-			<div class="">
-				<img class="quiz" src="img/quiz.png">
-			</div>
-			<button>LOGIN</button>
-		</nav>
-	</header>
+
+	<?php include 'include/navbar.php'; ?>
+
 	<div class="conteiner">
 		<div class="content">
 			<h1 class="title-quiz">quizApp</h1>
@@ -22,19 +17,19 @@
 			<p class="parrafo-quiz">Esta aplicacion mejora tu capacidad de responder preguntas rapidamente y con esta aplicacion web aprenderas cosas nuevas sobre cultura general</p>
 		</div>	
 		<div class="login">			
-			<form class="login-sesion">
+			<form class="login.php">
 				<div class="checkName">
 					<div class="form-submit">
 						<button>FACEBOOK</button>
 					</div>
 					<div class="form-style">
-						<input type="text" placeholder="Email">
+						<input type="text" name="email" placeholder="Email">
 					</div>
 					<div class="form-style">
-						<input type="password" placeholder="Contrasena">
+						<input type="password" name="password" placeholder="Contrasena">
 					</div>
 					<div class="form-submit">
-						<button>INICIAR</button>
+						<button>INICIAR SESIÓN</button>
 					</div>
 					<div id="finestra-modal1" class="form-submit">
 						<button>REGISTRARSE</button>
