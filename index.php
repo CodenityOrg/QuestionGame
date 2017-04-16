@@ -6,12 +6,12 @@
 <body>
 
 	<?php
-			session_start();
+			//session_start();
 
-			include 'question.php';
-			$_SESSION["lastquestion"] = $question[0]["id"];
+			
+			//$_SESSION["lastquestion"] = $question[0]["id"];
 	 ?>
-	<form method="post" action="verification_answer.php">
+	<!-- <form method="post" action="verification_answer.php">
   Title: <input type="text" name="question_id" value=<?php $question[0]["id"] ?>> <?php echo $question[0]["title"]; ?>
   <br><br>
   Options:
@@ -22,7 +22,7 @@
 	 ?>
   <br><br>
   <input type="submit" name="submit" value="Submit">
-</form>
+</form> -->
 
 
 	<script type="text/javascript">
