@@ -4,7 +4,7 @@
 
 }
 .header-encabezado{
-	background: blue;
+	background: black;
 	height: 10%;	
 }
 .header-quiz{
@@ -22,9 +22,11 @@
 	text-align: center;
 	margin-bottom: 50px;
 	margin-top: 50px;
+	color: white;
 }
 .parrafo-quiz{
 	margin: 30px;
+	color: white;
 }
 .conteiner{
 	display: flex;		
@@ -32,11 +34,11 @@
 }
 .content{
 	width: 50%;	
-	background: antiquewhite;
+	background: #2F2F2F;
 }
 .login{
 	width: 50%;
-	background-color: aquamarine;
+	background-color: #2F2F2F;
 	display: flex;
 	justify-content: center;
 	text-align: center;
@@ -44,13 +46,13 @@
 	font-size: 25px;
 }
 .form-style input{
-	border: 1px solid #00AAD4;
+	border:1px solid #060606;
     padding: 6px;
     margin-bottom: 8px;
 }
 .form-submit button{
 	color: white;
-    background: #00AAD4;
+    background: #000000;
     cursor: pointer;
     border: none;
     margin-bottom: 10px;
@@ -65,3 +67,81 @@ input[type="email"] {
     height: 29px;
     width: 275px;
 }
+
+/*MODAL*/
+.boto1 {
+  display: table;
+  /*margin: 0;*/
+  /*padding: .5em 1em;*/
+  width: 1em;
+  height: 1em;
+  color: #999999;
+  background-color: #D3D3D3;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1em;
+  /*border-radius: 3px;*/
+  cursor: pointer;
+}
+.boto1:hover {
+  text-decoration: none;
+}
+.boto1:active, .boto1:focus {
+  outline: none;
+}
+.boto1:visited {
+  color: white;
+}
+.finestra-modal1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  z-index: 10;
+  top: -100vh;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all .75s;
+  transition: all .75s;
+}
+
+.finestra-modal__contingut1 {
+  position: relative;  
+  width: 35%;
+  text-align: center;  
+  background-color: white;  
+  height: 70%;  
+}
+.finestra-modal__contingut1 h3 {
+  margin-top: 0;
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+.finestra-modal__contingut1 .finestra-modal-tancar1 {
+  position: absolute;
+  z-index: 15;
+/*  top: 15px;*/
+  right: 1px;
+  padding: 0;
+  /*background-color: none;
+  border-radius: 50%;*/
+  margin: 5px;
+}
+
+.js-mostrar1 {
+  top: 0;
+}
+/*fin de modal*/

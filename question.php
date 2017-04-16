@@ -1,3 +1,28 @@
+<?php
+
+      include 'config/db.php';
+
+      session_start();
+
+      $lastQuestion = $_SESSION["lastQuestion"];
+
+      if(isset($lastQuestion)) 	$question =  "SELECT * FROM questions ORDER BY RAND() LIMIT 1";
+      else $question = "SELECT * FROM questions WHERE id=".$lastQuestion;
+
+      $consult = $con->prepare($question);
+      $consult->execute();
+
+      $question = $consult->fetch();
+
+      $options = "SELECT * FROM options WHERE question_id = " . $question["id"];
+
+      $consult = $con->prepare($options);
+      $consult->execute();
+
+      $options = $consult->fetchAll();
+
+      $_SESSION["lastQuestion"] = $question["id"];
+   ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,32 +30,35 @@
 </head>
 <body>
 
-  <h1>Question 1 about that etc etc etc .....</h1>
+  <h1><?php echo $question["title"]; ?> </h1>
   <ul>
-    <li>Option 1</li>
-    <li>Option 2</li>
-    <li>Option 3</li>
-    <li>Option 4</li>
+  	<?php foreach ($options as $key => $option): ?>
+	    <li><?php echo $option["title"]; ?></li>
+  	<?php endforeach ?>
   </ul>
-  <?php
+  
+  <script type="text/javascript">
+		document.getElementById("register-form").addEventListener("submit",function() {
+			var $this = this;
+			var data = {
+				name : this.name.value,
+				lastname: this.lastname.value,
+				email: this.email.value,
+				password: this.password.value
+			};
 
-      include 'config/db.php';
+			var xHttp = new XMLHttpRequest();
+			xHttp.onreadystatechange  = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					location.reload();
+			 	}
+			}
+			xHttp.setRequestHeader("Content-type", "application/json");
+			xHttp.open("POST")
+			xHttp.send(data);
 
-      $question =  "SELECT * FROM questions ORDER BY RAND() LIMIT 1";
-
-      $consult = $con->prepare($question);
-      $consult->execute();
-
-      $question = $consult->fetchAll();
-
-      $options = "SELECT * FROM options WHERE question_id = " . $question[0]["id"];
-
-      $consult = $con->prepare($options);
-      $consult->execute();
-
-      $options = $consult->fetchAll();
-   ?>
-
+		});
+  </script>
 
 </body>
 </html>
