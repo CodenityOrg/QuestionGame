@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+// document.addEventListener('DOMContentLoaded',function(){
+// 	FinestraModal1();
+// });
+>>>>>>> 6ede633dad9173a61dd6e047976449f026bb8202
 
 function FinestraModal1(){
 	var finestraModal1 = document.getElementById("finestra-modal1"),

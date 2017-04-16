@@ -1,36 +1,104 @@
+<?php
+
+      include 'config/db.php';
+
+      session_start();
+
+      $lastQuestion = isset($_SESSION["lastQuestion"])? $_SESSION["lastQuestion"]:"";
+
+      if(!$lastQuestion) 	$question =  "SELECT * FROM questions ORDER BY RAND() LIMIT 1";
+      else $question = "SELECT * FROM questions WHERE id=".$lastQuestion;
+
+      $consult = $con->prepare($question);
+      $consult->execute();
+
+      $question = $consult->fetch();
+
+      $options = "SELECT * FROM options WHERE question_id = " . $question["id"];
+
+      $consult = $con->prepare($options);
+      $consult->execute();
+
+      $options = $consult->fetchAll();
+
+      $_SESSION["lastQuestion"] = $question["id"];
+   ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
 </head>
 <body>
+  	<!-- <input type="hidden" id="question_id" name="question_id" value=" <?php echo $question["id"]; ?> ">
+    <h1><?php echo $question["title"]; ?> </h1>
+    <ul>
+    	<?php foreach ($options as $key => $option): ?>
+  	    <li data-id="<?php echo $option["id"]; ?>" class="options"><?php echo $option["title"]; ?></li>
+    	<?php endforeach ?>
 
-  <h1>Question 1 about that etc etc etc .....</h1>
-  <ul>
-    <li>Option 1</li>
-    <li>Option 2</li>
-    <li>Option 3</li>
-    <li>Option 4</li>
-  </ul>
-  <?php
+    </ul> -->
+    
+  <form method="post" action="verification_answer.php">
+      Title: <input type="text" name="question_id" value=<?php echo $question["id"]; ?>> <?php echo $question["title"]; ?>
+      <br><br>
+      Options:
+    	<?php
+    		foreach ($options as $option) {
+    			echo "<br> <input type='radio' name='option_id'  value=" . $option["id"] . ">" . $option["title"] . "";
+    		}
+    	 ?>
+      <br><br>
+      <input type="submit" name="submit" value="Submit">
+    </form>
+  <script type="text/javascript">
 
-      include 'config/db.php';
+  		var options = document.getElementsByClassName('options');
+  		for(var i = 0; i < options.length; i++) {
+            var option = options[i];
+            option.onclick = function() {
+            	debugger;
+            	var option_id = Number(this.getAttribute("data-id"));
+            	var question_id = Number(document.getElementById("question_id").value);
 
-      $question =  "SELECT * FROM questions ORDER BY RAND() LIMIT 1";
+            	var data = {
+            		question_id : question_id,
+            		option_id : option_id
+            	};
 
-      $consult = $con->prepare($question);
-      $consult->execute();
+				var xHttp = new XMLHttpRequest();
+				xHttp.onreadystatechange  = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						location.reload();
+				 	}
+				}
+				xHttp.open("POST","verification_answer.php");
+				xHttp.setRequestHeader("Content-type", "application/json");
+				xHttp.send(data);
 
-      $question = $consult->fetchAll();
+            }
+        }
 
-      $options = "SELECT * FROM options WHERE question_id = " . $question[0]["id"];
+		// document.getElementById("register-form").addEventListener("submit",function() {
+		// 	var $this = this;
+		// 	var data = {
+		// 		name : this.name.value,
+		// 		lastname: this.lastname.value,
+		// 		email: this.email.value,
+		// 		password: this.password.value
+		// 	};
 
-      $consult = $con->prepare($options);
-      $consult->execute();
+		// 	var xHttp = new XMLHttpRequest();
+		// 	xHttp.onreadystatechange  = function() {
+		// 		if (this.readyState == 4 && this.status == 200) {
+		// 			location.reload();
+		// 	 	}
+		// 	}
+		// 	xHttp.setRequestHeader("Content-type", "application/json");
+		// 	xHttp.open("POST")
+		// 	xHttp.send(data);
 
-      $options = $consult->fetchAll();
-   ?>
-
+		// });
+  </script>
 
 </body>
 </html>
