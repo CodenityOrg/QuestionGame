@@ -47,8 +47,10 @@
 }
 .form-style input{
 	border:1px solid #060606;
-    padding: 6px;
-    margin-bottom: 8px;
+  padding: 6px;
+  margin-bottom: 8px;
+  height: 29px;
+  width: 275px; 
 }
 .form-submit button{
 	color: white;
@@ -58,14 +60,6 @@
     margin-bottom: 10px;
     height: 40px;
     width: 135px;
-}
-input[type="password"] {
-    height: 29px;
-    width: 275px;
-}
-input[type="email"] {
-    height: 29px;
-    width: 275px;
 }
 
 /*MODAL*/
@@ -92,6 +86,7 @@ input[type="email"] {
 .boto1:visited {
   color: white;
 }
+
 .finestra-modal1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -118,10 +113,11 @@ input[type="email"] {
 
 .finestra-modal__contingut1 {
   position: relative;  
-  width: 35%;
+  width: 30%;
   text-align: center;  
   background-color: white;  
-  height: 70%;  
+  height: 70%;
+  
 }
 .finestra-modal__contingut1 h3 {
   margin-top: 0;
@@ -145,3 +141,24 @@ input[type="email"] {
   top: 0;
 }
 /*fin de modal*/
+h1.modal-registrate{
+  margin-top: 20px;
+}
+.form-register {
+    margin-top: 20px;
+    font-size: 19px;
+}
+button.register-enviar {
+    margin-top: 15px;
+    font-size: 22px;
+    padding: 10px;
+}
+input[type="password"] {
+    height: 30px;
+    width: 260px;
+}
+input[type="text"] {
+    height: 30;
+    height: 30px;
+    width: 260px;
+}

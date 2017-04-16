@@ -8,15 +8,7 @@
 <body>
 	
 	<?php include 'include/navbar.php'; ?>
-		
-	<header class="header-encabezado">
-		<nav class="header-quiz">
-			<div class="">
-				<img class="quiz" src="img/quiz.png">
-			</div>
-			<button>LOGIN</button>
-		</nav>
-	</header>
+
 	<div class="conteiner">
 		<div class="content">
 			<h1 class="title-quiz">quizApp</h1>
@@ -28,7 +20,7 @@
 			<form class="login-sesion">
 				<div class="checkName">
 					<div class="form-submit">
-						<button>FACEBOOK</button>
+						<button class="quiz-enviar">FACEBOOK</button>
 					</div>
 					<div class="form-style">
 						<input type="text" placeholder="Email">
@@ -37,12 +29,13 @@
 						<input type="password" placeholder="Contrasena">
 					</div>
 					<div class="form-submit">
-						<button>INICIAR</button>
-					</div>
-					<div id="finestra-modal-obrir1" class="finestra-modal-obrir1 boto1">
-						<a id="finestra-modal-obrir1" class="finestra-modal-obrir1 boto1">REGISTRARTE</a>
+						<button class="quiz-enviar">INICIAR</button>
 					</div>			
-					
+					<difv id="finestra-modal-obrir1" class="form-submit ">
+						<button class="quiz-enviar">REGISTRARTE</button>
+					</div>	
+							
+					<span><a id="finestra-modal-obrir1" class="finestra-modal-obrir1 boto1">ABRIR</a></span>									
 				</div>
 			</form>
 		</div>
@@ -50,7 +43,7 @@
 			<div id="finestra-modal1" class="finestra-modal1 js-mostrar1">
 			  <div class="finestra-modal__contingut1">        
 			      <div id="finestra-modal-tancar1" class="finestra-modal-tancar1 boto1">×</div>    
-			      	<div>Registrate</div>
+			      	<h1 class="modal-registrate">Registrate</h1>
 					<form id="">
 						<div class="form-register">
 							<p>Ingrese el Nombre</p>
@@ -69,7 +62,7 @@
 							<input type="password" placeholder="Contrasena">
 						</div>
 						<div>
-							<input type="submit" name="Enviar" placeholder="Enviar">
+							<button class="register-enviar" >ENVIAR</button>
 						</div>
 					</form>			      		
 			       </div>   
