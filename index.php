@@ -7,7 +7,7 @@
 
 	<?php
 			session_start();
-			
+
 			include 'question.php';
 			$_SESSION["lastquestion"] = $question[0]["id"];
 	 ?>
