@@ -1,6 +1,6 @@
-document.addEventListener('DOMContentLoaded',function(){
-	FinestraModal1();
-});
+// document.addEventListener('DOMContentLoaded',function(){
+// 	FinestraModal1();
+// });
 
 function FinestraModal1(){
 	var finestraModal1 = document.getElementById("finestra-modal1"),

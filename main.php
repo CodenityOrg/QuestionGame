@@ -54,7 +54,7 @@
 			  <div class="finestra-modal__contingut1">        
 			      <div id="finestra-modal-tancar1" class="finestra-modal-tancar1 boto1">×</div>    
 			      	<div>Registrate</div>
-					<form id="">
+					<form id="register-form">
 						<div class="form-register">
 							<p>Ingrese el Nombre</p>
 							<input type="text" placeholder="Nombre">
@@ -81,6 +81,31 @@
 		</div>
 	
 	<script src="js/index.js"></script>
+	<script type="text/javascript">
+		
 
+
+		document.getElementById("register-form").addEventListener("submit",function() {
+			var $this = this;
+			var data = {
+				name : this.name.value,
+				lastname: this.lastname.value,
+				email: this.email.value,
+				password: this.password.value
+			};
+
+			var xHttp = new XMLHttpRequest();
+			xHttp.onreadystatechange  = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					location.reload();
+			 	}
+			}
+			xHttp.setRequestHeader("Content-type", "application/json");
+			xHttp.open("POST")
+			xHttp.send(data);
+
+		});
+
+	</script>
 </body>
 </html>
