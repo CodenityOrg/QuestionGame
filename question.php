@@ -1,18 +1,36 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
 
-    include 'config/db.php';
+  <h1>Question 1 about that etc etc etc .....</h1>
+  <ul>
+    <li>Option 1</li>
+    <li>Option 2</li>
+    <li>Option 3</li>
+    <li>Option 4</li>
+  </ul>
+  <?php
 
-    $question =  "SELECT * FROM questions ORDER BY RAND() LIMIT 1";
+      include 'config/db.php';
 
-    $consult = $con->prepare($question);
-    $consult->execute();
+      $question =  "SELECT * FROM questions ORDER BY RAND() LIMIT 1";
 
-    $question = $consult->fetchAll();
+      $consult = $con->prepare($question);
+      $consult->execute();
 
-    $options = "SELECT * FROM options WHERE question_id = " . $question[0]["id"];
+      $question = $consult->fetchAll();
 
-    $consult = $con->prepare($options);
-    $consult->execute();
+      $options = "SELECT * FROM options WHERE question_id = " . $question[0]["id"];
 
-    $options = $consult->fetchAll();
- ?>
+      $consult = $con->prepare($options);
+      $consult->execute();
+
+      $options = $consult->fetchAll();
+   ?>
+
+
+</body>
+</html>
