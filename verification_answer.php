@@ -3,6 +3,8 @@
 
     $option_id = $_POST["option_id"];
     $question_id = $_POST["question_id"];
+    echo $option_id;
+    echo $question_id;
 
     $sql =  "SELECT answer FROM options WHERE id = " . $option_id . " and question_id = " . $question_id;
     $consult = $con->prepare($sql);
