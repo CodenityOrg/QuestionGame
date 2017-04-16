@@ -1,5 +1,5 @@
-<?php 
-	
+<?php
+
 	include 'config/db.php';
 
 	$email = isset($_REQUEST['email']) ? $_REQUEST['email']:'';
@@ -10,9 +10,9 @@
 
 		$sql = "SELECT * FROM users WHERE email= ".$email. " AND password=".$password;
 
-		$result = $con->prepare($sql); 
-		$result->execute(); 
-		$numRows = $result->fetchColumn(); 
+		$result = $con->prepare($sql);
+		$result->execute();
+		$numRows = $result->fetchColumn();
 
 		if($numRows>0){
 
