@@ -32,6 +32,8 @@
 			$_SESSION["name"] = $row["name"]." ".$row["lastname"];
 			$_SESSION["id"] = $row["id"];
 			$_SESSION["email"] = $row["email"];
+			$_SESSION["score"] = $row["score"];
+			$_SESSION["current_score"] = 0;
 			header('Location: question.php');
 		}
 
