@@ -31,7 +31,7 @@
 			<form action="login.php" method="POST">
 				<div class="checkName">
 					<div class="form-submit">
-						<button>FACEBOOK</button>
+						<button class="quiz-enviar">FACEBOOK</button>
 					</div>
 					<div class="form-style">
 						<input type="email" name="email" placeholder="Email">
@@ -40,12 +40,20 @@
 						<input type="password" placeholder="Contrasena">
 					</div>
 					<div class="form-submit">
+<<<<<<< HEAD
+						<button class="quiz-enviar">INICIAR</button>
+=======
 						<button type="submit">INICIAR SESIÓN</button>
 					</div>
 					<div id="finestra-modal-obrir1" class="finestra-modal-obrir1 boto1">
 						<a id="finestra-modal-obrir1" class="finestra-modal-obrir1 boto1">REGISTRARTE</a>
+>>>>>>> 6ede633dad9173a61dd6e047976449f026bb8202
 					</div>			
-					
+					<difv id="finestra-modal-obrir1" class="form-submit ">
+						<button class="quiz-enviar">REGISTRARTE</button>
+					</div>	
+							
+					<span><a id="finestra-modal-obrir1" class="finestra-modal-obrir1 boto1">ABRIR</a></span>									
 				</div>
 			</form>
 		</div>
@@ -53,8 +61,13 @@
 			<div id="finestra-modal1" class="finestra-modal1 js-mostrar1">
 			  <div class="finestra-modal__contingut1">        
 			      <div id="finestra-modal-tancar1" class="finestra-modal-tancar1 boto1">×</div>    
+<<<<<<< HEAD
+			      	<h1 class="modal-registrate">Registrate</h1>
+					<form id="">
+=======
 			      	<div>Registrate</div>
 					<form id="register-form">
+>>>>>>> 6ede633dad9173a61dd6e047976449f026bb8202
 						<div class="form-register">
 							<p>Ingrese el Nombre</p>
 							<input type="text" placeholder="Nombre">
@@ -72,7 +85,7 @@
 							<input type="password" placeholder="Contrasena">
 						</div>
 						<div>
-							<input type="submit" name="Enviar" placeholder="Enviar">
+							<button class="register-enviar" >ENVIAR</button>
 						</div>
 					</form>			      		
 			       </div>   

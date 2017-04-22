@@ -6,10 +6,10 @@
 <body>
 
 	<?php
-			session_start();
+			//session_start();
 
-			include 'question.php';
-			$_SESSION["lastquestion"] = $question[0]["id"];
+
+			//$_SESSION["lastquestion"] = $question[0]["id"];
 	 ?>
 
 	<script type="text/javascript">

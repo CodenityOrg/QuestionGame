@@ -4,9 +4,9 @@
 
       session_start();
 
-      $lastQuestion = $_SESSION["lastQuestion"];
+      $lastQuestion = isset($_SESSION["lastQuestion"])? $_SESSION["lastQuestion"]:"";
 
-      if(!isset($lastQuestion)) 	$question =  "SELECT * FROM questions ORDER BY RAND() LIMIT 1";
+      if(!$lastQuestion) 	$question =  "SELECT * FROM questions ORDER BY RAND() LIMIT 1";
       else $question = "SELECT * FROM questions WHERE id=".$lastQuestion;
 
       $consult = $con->prepare($question);
@@ -29,14 +29,27 @@
 	<title></title>
 </head>
 <body>
-	<input type="hidden" id="question_id" name="question_id" value=" <?php echo $question["id"]; ?> ">
-  <h1><?php echo $question["title"]; ?> </h1>
-  <ul>
-  	<?php foreach ($options as $key => $option): ?>
-	    <li data-id="<?php echo $option["id"]; ?>" class="options"><?php echo $option["title"]; ?></li>
-  	<?php endforeach ?>
-  </ul>
-  
+  	<!-- <input type="hidden" id="question_id" name="question_id" value=" <?php echo $question["id"]; ?> ">
+    <h1><?php echo $question["title"]; ?> </h1>
+    <ul>
+    	<?php foreach ($options as $key => $option): ?>
+  	    <li data-id="<?php echo $option["id"]; ?>" class="options"><?php echo $option["title"]; ?></li>
+    	<?php endforeach ?>
+
+    </ul> -->
+    
+  <form method="post" action="verification_answer.php">
+      Title: <input type="text" name="question_id" value=<?php echo $question["id"]; ?>> <?php echo $question["title"]; ?>
+      <br><br>
+      Options:
+    	<?php
+    		foreach ($options as $option) {
+    			echo "<br> <input type='radio' name='option_id'  value=" . $option["id"] . ">" . $option["title"] . "";
+    		}
+    	 ?>
+      <br><br>
+      <input type="submit" name="submit" value="Submit">
+    </form>
   <script type="text/javascript">
 
   		var options = document.getElementsByClassName('options');
