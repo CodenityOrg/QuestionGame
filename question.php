@@ -1,4 +1,13 @@
 <?php
+    
+
+      session_start();
+
+      $email = isset($_SESSION["email"])? $_SESSION["email"]:"";
+      if(!$email) {
+        header('location:main.php');
+        die();
+      }
 
       include 'config/db.php';
 
@@ -27,16 +36,12 @@
 <html>
 <head>
 	<title></title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
 <body>
-  	<!-- <input type="hidden" id="question_id" name="question_id" value=" <?php echo $question["id"]; ?> ">
-    <h1><?php echo $question["title"]; ?> </h1>
-    <ul>
-    	<?php foreach ($options as $key => $option): ?>
-  	    <li data-id="<?php echo $option["id"]; ?>" class="options"><?php echo $option["title"]; ?></li>
-    	<?php endforeach ?>
+    <?php include 'include/navbar.php'; ?>
 
-    </ul> -->
     
   <form method="post" action="verification_answer.php">
       Title: <input type="text" name="question_id" value=<?php echo $question["id"]; ?>> <?php echo $question["title"]; ?>
