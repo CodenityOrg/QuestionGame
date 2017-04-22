@@ -36,7 +36,8 @@
 <html>
 <head>
 	<title></title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
 <body>
@@ -44,7 +45,7 @@
 
     
   <form method="post" action="verification_answer.php">
-      Title: <input type="text" name="question_id" value=<?php echo $question["id"]; ?>> <?php echo $question["title"]; ?>
+      Tittle: <input type="hidden" name="question_id" value=<?php echo $question["id"]; ?>> <?php echo $question["title"]; ?>
       <br><br>
       Options:
     	<?php

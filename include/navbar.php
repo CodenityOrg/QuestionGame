@@ -16,10 +16,14 @@
 				<p style="color:white;" class="fullname"> <?= $_SESSION['name'] ?>  <?= $_SESSION['lastname'] ?> </p>
 			</div>
 			<div>
+				<p style="color:white;">Mi Score : <?= $_SESSION['current_score'] ?> </p>
+			</div>
+			<div>
+				<p><a href="ranking.php">Ranking</a></p>
+			</div>
+			<div>
 				<p><a style="" href="logout.php">Logout</a></p>
 			</div>
-		<?php
-			}
-		?>
+		<?php } ?>
 	</nav>
 </header>
