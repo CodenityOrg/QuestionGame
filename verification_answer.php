@@ -3,8 +3,10 @@
     session_start();
     $option_id = $_POST["option_id"];
     $question_id = $_POST["question_id"];
-    //echo $option_id;
-    //echo $question_id;
+    if ($_POST)){
+      echo $option_id;
+      echo $question_id;
+    }
 
     $sql =  "SELECT answer FROM options WHERE id = " . $option_id . " and question_id = " . $question_id;
     $consult = $con->prepare($sql);
@@ -15,23 +17,22 @@
     unset($_SESSION["lastQuestion"]);
 
     if($question["answer"]){
-        //http_response_code(200);
-        echo "CORRECTO";
         $_SESSION["current_score"]++;
-        header('Location: question.php');
+        http_response_code(200);
+        //echo "CORRECTO";
+        //header('Location: question.php');
     }else{
-        echo "INCORRECTO";
+        //echo "INCORRECTO";
         if ($_SESSION["current_score"]>$_SESSION["score"]) {
           $sql = "UPDATE users SET score= " . $_SESSION["current_score"] . " WHERE id=" . $_SESSION["id"];
           $consult = $con->prepare($sql);
           $consult->execute();
           $_SESSION["score"] = $_SESSION["current_score"];
-          $_SESSION["current_score"] = 0;
+          //header('Location: question.php');
         }
-        header('Location: question.php');
-      
-        //http_response_code(503);
+        $_SESSION["current_score"] = 0;
 
+        http_response_code(503);
     }
 
     //echo $result[0]["answer"];

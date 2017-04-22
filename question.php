@@ -37,67 +37,90 @@
     	<?php endforeach ?>
 
     </ul> -->
-    
-  <form method="post" action="verification_answer.php">
-      Title: <input type="text" name="question_id" value=<?php echo $question["id"]; ?>> <?php echo $question["title"]; ?>
+
+
+    <?php echo  "Score actual:  " . $_SESSION["current_score"] . "<br>";  ?>
+    <?php echo  "Score: -------" . $_SESSION["score"]; ?>
+
+  <form id = "question-form" method="post" action="verification_answer.php">
+      Title: <input type="hidden" id = "question_id" name="question_id" value=<?php echo $question["id"]; ?>> <?php echo $question["title"]; ?>
       <br><br>
       Options:
+
     	<?php
     		foreach ($options as $option) {
-    			echo "<br> <input type='radio' name='option_id'  value=" . $option["id"] . ">" . $option["title"] . "";
+    			echo "<br> <input type='radio' id='option_id' name='option_id'  value=" . $option["id"] . ">" . $option["title"] . "";
     		}
     	 ?>
       <br><br>
-      <input type="submit" name="submit" value="Submit">
+      <input type="submit" name="submit" value="Submit"> -->
     </form>
   <script type="text/javascript">
 
-  		var options = document.getElementsByClassName('options');
-  		for(var i = 0; i < options.length; i++) {
-            var option = options[i];
-            option.onclick = function() {
-            	debugger;
-            	var option_id = Number(this.getAttribute("data-id"));
-            	var question_id = Number(document.getElementById("question_id").value);
+  		// var options = document.getElementsByClassName('options');
+  		// for(var i = 0; i < options.length; i++) {
+      //       var option = options[i];
+      //       option.onclick = function() {
+      //       	debugger;
+      //       	var option_id = Number(this.getAttribute("data-id"));
+      //       	var question_id = Number(document.getElementById("question_id").value);
+      //
+      //       	var data = {
+      //       		question_id : question_id,
+      //       		option_id : option_id
+      //       	};
+      //
+			// 	var xHttp = new XMLHttpRequest();
+			// 	xHttp.onreadystatechange  = function() {
+			// 		if (this.readyState == 4 && this.status == 200) {
+			// 			location.reload();
+			// 	 	}
+			// 	}
+			// 	xHttp.open("POST","verification_answer.php");
+			// 	xHttp.setRequestHeader("Content-type", "application/json");
+			// 	xHttp.send(data);
+      //
+      //       }
+      //   }
+//--------------------------------------------------------------------------------------------------
+		document.getElementById("question-form").addEventListener("submit",function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+			var $this = this;
+      var option_id;
+      var question_id = Number(document.getElementById("question_id").value);
+      var options = document.getElementsByName("option_id");
+      for(var i=0;i<options.length;i++)
+      {
+            if(options[i].checked){
+                option_id=Number(options[i].value);
+            }
 
-            	var data = {
+      }
+      debugger;
+      var data = {
             		question_id : question_id,
             		option_id : option_id
-            	};
+      };
 
-				var xHttp = new XMLHttpRequest();
-				xHttp.onreadystatechange  = function() {
-					if (this.readyState == 4 && this.status == 200) {
-						location.reload();
-				 	}
-				}
-				xHttp.open("POST","verification_answer.php");
-				xHttp.setRequestHeader("Content-type", "application/json");
-				xHttp.send(data);
-
-            }
+			var xHttp = new XMLHttpRequest();
+			xHttp.onreadystatechange  = function() {
+				if (this.readyState == 4 && this.status == 200) {
+            alert("CORRECTO");
+            //console.log("CORRECTO");
+            //debugger;
+            location.reload();
+			 	}
+        else if (this.readyState == 4 && this.status == 503) {
+            alert("INCORRECTO");
+            //console.log("INCORRECTO");
         }
+			}
+      xHttp.open("POST","verification_answer.php");
+			xHttp.setRequestHeader("Content-type", "application/json");
+			xHttp.send(data);
 
-		// document.getElementById("register-form").addEventListener("submit",function() {
-		// 	var $this = this;
-		// 	var data = {
-		// 		name : this.name.value,
-		// 		lastname: this.lastname.value,
-		// 		email: this.email.value,
-		// 		password: this.password.value
-		// 	};
-
-		// 	var xHttp = new XMLHttpRequest();
-		// 	xHttp.onreadystatechange  = function() {
-		// 		if (this.readyState == 4 && this.status == 200) {
-		// 			location.reload();
-		// 	 	}
-		// 	}
-		// 	xHttp.setRequestHeader("Content-type", "application/json");
-		// 	xHttp.open("POST")
-		// 	xHttp.send(data);
-
-		// });
+		});
   </script>
 
 </body>
