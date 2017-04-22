@@ -1,5 +1,14 @@
 <?php
 
+
+      session_start();
+
+      $email = isset($_SESSION["email"])? $_SESSION["email"]:"";
+      if(!$email) {
+        header('location:main.php');
+        die();
+      }
+
       include 'config/db.php';
 
       session_start();
@@ -27,23 +36,19 @@
 <html>
 <head>
 	<title></title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
 <body>
-  	<!-- <input type="hidden" id="question_id" name="question_id" value=" <?php echo $question["id"]; ?> ">
-    <h1><?php echo $question["title"]; ?> </h1>
-    <ul>
-    	<?php foreach ($options as $key => $option): ?>
-  	    <li data-id="<?php echo $option["id"]; ?>" class="options"><?php echo $option["title"]; ?></li>
-    	<?php endforeach ?>
-
-    </ul> -->
-
-
-    <?php echo  "Score actual:  " . $_SESSION["current_score"] . "<br>";  ?>
-    <?php echo  "Score: -------" . $_SESSION["score"]; ?>
 
   <form id = "question-form" method="post" action="verification_answer.php">
       Title: <input type="hidden" id = "question_id" name="question_id" value=<?php echo $question["id"]; ?>> <?php echo $question["title"]; ?>
+<?php echo  "Score actual:  " . $_SESSION["current_score"] . "<br>";  ?>
+<?php echo  "Score: -------" . $_SESSION["score"]; ?>
+
+  <form method="post" action="verification_answer.php">
+      Title: <input type="text" name="question_id" value=<?php echo $question["id"]; ?>> <?php echo $question["title"]; ?>
+      <?php include 'include/navbar.php'; ?>
       <br><br>
       Options:
 

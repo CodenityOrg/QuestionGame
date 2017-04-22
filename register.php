@@ -16,6 +16,7 @@
 		"password"=>$password
 	);
 
+
 	$v = new Valitron\Validator($data);
 	$v->rule('required', ['name','email','password']);
 	$v->rule('email','email');

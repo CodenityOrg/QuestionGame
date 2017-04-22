@@ -8,7 +8,10 @@
 
 	$email = isset($_REQUEST['email']) ? $_REQUEST['email']:'';
 	$password = isset($_REQUEST['password']) ? $_REQUEST['password']:'';
-	$type = isset($_REQUEST['type'])? $_REQUEST['type']:'';
+	$facebook_id = isset($_REQUEST['facebookId'])? $_REQUEST['facebookId'] : '';
+
+	print_r($_REQUEST);
+
 
 	if($email&&$password){
 
@@ -37,8 +40,39 @@
 			header('Location: question.php');
 		}
 
-	}else{
+	}else if($email&&$facebook_id){
+
+		$name 		= isset($_POST['name']) ? $_POST['name'] : '';
+		$lastname 	= isset($_POST['lastname'])? $_POST['lastname']:'';
+
+
+		$sql = "SELECT * FROM users WHERE email = '".$email."' LIMIT 1";
+		echo $sql;
+		$result = $con->prepare($sql);
+		$result->execute();	
+
+		$row = $result->fetch();
+
+		if(!$row){
+			$sql = "INSERT INTO users (name,lastname,email,facebook_id) VALUES ('".$name."','".$lastname."','".$email."','".$facebook_id."')";
+			$result = $con->prepare($sql); 
+			$result->execute();
+		}else{
+			$sql = "UPDATE users SET facebook_id = '".$facebook_id."' WHERE email='".$email."' "; 
+			$result = $con->prepare($sql); 
+
+		}
+
+
+		$_SESSION["name"] = $name." ".$lastname;
+		$_SESSION["id"] = $row["id"];
+		$_SESSION["email"] = $email;
+		$_SESSION["score"] = 0;
+		$_SESSION["current_score"] = 0;
+
 		header('Location: index.php');
+	}else{
+		http_response_code(503);
 	}
 
  ?>
