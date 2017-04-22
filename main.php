@@ -85,7 +85,9 @@
 		
 
 
-		document.getElementById("register-form").addEventListener("submit",function() {
+		document.getElementById("register-form").addEventListener("submit",function(e) {
+			e.preventDefault();
+			e.stopPropagation();
 			var $this = this;
 			var data = {
 				name : this.name.value,
