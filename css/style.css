@@ -1,54 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Hind');
-
-
 *{	
 	margin:0;
 	padding: 0;
-  font-family: 'Hind', sans-serif;
-}
 
-a{
-  color: white;
 }
-
-a:link {
-    text-decoration: none;
-}
-
-a:visited {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-a:active {
-    text-decoration: none;
-}
-
-.btn{
-  color: white;
-  cursor: pointer;
-  border: none;
-  padding: 10px;
-  margin-bottom: 10px;
-  height: 50px;
-  background: #397d9e;
-  border-radius: 5px;
-  font-size: 15px;
-}
-
-#fb-login{
-  background: #4a6ea9;
-}
-
-.input{
-  border-radius: 5px;
-}
-
 .header-encabezado{
-	background: #397d9e;
+	background: black;
 	height: 10%;	
 }
 .header-quiz{
@@ -62,6 +18,9 @@ a:active {
 	height: 80px;
 	width: 80px;
 }
+
+/*INFO PRINCIPAL*/
+
 .title-quiz{
 	text-align: center;
 	margin-bottom: 50px;
@@ -78,38 +37,50 @@ a:active {
 }
 .content{
 	width: 50%;	
+	background: #2F2F2F;
 }
+
+/*estilos retocados*/
 .login{
-	width: 50%;
-	display: flex;
-	justify-content: center;
+	margin: auto;
+    margin-top: 100px;
+    width: 250px;
+    box-sizing: border-box;
+    padding: 5px;
 	text-align: center;
-	align-items: center;
-	font-size: 25px;
-}
-.form-style input{
-	border:1px solid #060606;
-  padding: 6px;
-  margin-bottom: 8px;
-  height: 29px;
-  width: 275px; 
 }
 
-.btn-medium{
-  width: 150px;
+.login-facebook {
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    background: blue;
+    margin: 10px 0px;
+    border: 0;
 }
 
-.btn-large{
-  width: 300px;
+.login form {
+    width: 100%;
 }
 
-
-
-.form-submit input{
-  height: 30px;
-  width: 260px;
+.login > form > input {
+    width: 100%;
+    height: 30px;
+    margin: 5px 0;
+    padding: 3px;
+    box-sizing: border-box;
 }
 
+.btn-sesion {
+    width: 70%;
+    margin: 5px 0;
+    height: 30px;
+    border-radius: 15px;
+    border: 0;
+    background: black;
+    color: #fff;
+}
+/*fin de estilos retocados*/
 /*MODAL*/
 .boto1 {
   display: table;
@@ -127,6 +98,7 @@ a:active {
 }
 .boto1:hover {
   text-decoration: none;
+    
 }
 .boto1:active, .boto1:focus {
   outline: none;
@@ -160,35 +132,34 @@ a:active {
 }
 
 .finestra-modal__contingut1 {
-  position: relative;  
-  width: 30%;
-  text-align: center;  
-  background-color: white;  
-  height: 70%;
-  
+    position: relative;  
+    width: 280px;
+    text-align: center;  
+    background-color: white;  
+    height: 70%;
+    box-sizing: border-box;
+    padding: 0 15px;
 }
-.finestra-modal__contingut1 h3 {
-  margin-top: 0;
-  margin-bottom: 2em;
-  padding-bottom: 1em;
-  text-transform: uppercase;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-}
+
 .finestra-modal__contingut1 .finestra-modal-tancar1 {
   position: absolute;
   z-index: 15;
-/*  top: 15px;*/
   right: 1px;
   padding: 0;
-  /*background-color: none;
-  border-radius: 50%;*/
   margin: 5px;
 }
-
+/*CLASES PARA MODAL CON JAVASCRIPT*/
 .js-mostrar1 {
   top: 0;
 }
+.modalclose1 {
+    top: -100vh;
+    transition: all 0.5s;
+}
+/*FIN --- CLASES PARA MODAL CON JAVASCRIPT*/
+
 /*fin de modal*/
+
 h1.modal-registrate{
   margin-top: 20px;
 }
@@ -196,9 +167,36 @@ h1.modal-registrate{
     margin-top: 20px;
     font-size: 19px;
 }
-button.register-enviar {
-    margin-top: 15px;
-    font-size: 22px;
-    padding: 10px;
+
+.finestra-modal__contingut1 button {
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 20px;
+    margin: 10px 0;
+    background: black;
+    color: #fff;
 }
 
+.finestra-modal__contingut1 input {
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    padding: 0 8px ;
+    margin-bottom: 10px;
+}
+
+
+@media screen and (min-width: 480px) {
+    .finestra-modal__contingut1 {
+        width: 350px;
+    }
+    
+    .login {
+        width: 450px;
+    }
+}
+
+@media screen and (min-width: 767px) {
+   
+}
