@@ -49,25 +49,27 @@
 		$sql = "SELECT * FROM users WHERE email = '".$email."' LIMIT 1";
 		echo $sql;
 		$result = $con->prepare($sql);
-		$result->execute();	
+		$result->execute();
 
 		$row = $result->fetch();
 
 		if(!$row){
 			$sql = "INSERT INTO users (name,lastname,email,facebook_id) VALUES ('".$name."','".$lastname."','".$email."','".$facebook_id."')";
-			$result = $con->prepare($sql); 
+			$result = $con->prepare($sql);
 			$result->execute();
+
 		}else{
-			$sql = "UPDATE users SET facebook_id = '".$facebook_id."' WHERE email='".$email."' "; 
-			$result = $con->prepare($sql); 
+			$sql = "UPDATE users SET facebook_id = '".$facebook_id."' WHERE email='".$email."' ";
+			$result = $con->prepare($sql);
 
 		}
 
 
 		$_SESSION["name"] = $name." ".$lastname;
-		$_SESSION["id"] = $row["id"];
+		$_SESSION["id"] = $id["id"];
+
 		$_SESSION["email"] = $email;
-		$_SESSION["score"] = 0;
+		$_SESSION["score"] = $score? $score:0;
 		$_SESSION["current_score"] = 0;
 
 		header('Location: index.php');

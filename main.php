@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 	session_start();
 
@@ -15,9 +15,9 @@
 	<title>quizApp</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>	
-	
-	
+<body>
+
+
 	<?php include 'include/navbar.php'; ?>
 
 	<div class="conteiner">
@@ -26,9 +26,9 @@
 			<p class="parrafo-quiz">Esta aplicacion mejora tu capacidad de responder preguntas rapidamente y con esta aplicacion web aprenderas cosas nuevas sobre cultura general</p>
 			<p class="parrafo-quiz">Esta aplicacion mejora tu capacidad de responder preguntas rapidamente y con esta aplicacion web aprenderas cosas nuevas sobre cultura general</p>
 			<p class="parrafo-quiz">Esta aplicacion mejora tu capacidad de responder preguntas rapidamente y con esta aplicacion web aprenderas cosas nuevas sobre cultura general</p>
-		</div>	
-		<div class="login">			
-			<form method="POST">
+		</div>
+		<div class="login">
+			<form method="POST" action="login.php">
 				<div class="checkName">
 					<div class="form-submit">
 						<button id="fb-login">FACEBOOK</button>
@@ -37,23 +37,24 @@
 						<input type="email" name="email" placeholder="Email">
 					</div>
 					<div class="form-style">
-						<input type="password" placeholder="Contrasena">
+						<input type="password" name="password" placeholder="Contrasena">
 					</div>
 					<div class="form-submit">
+						<input type="submit" id="login" value="Login" />
 						<button class="quiz-enviar">INICIAR</button>
-					</div>			
-					<difv id="finestra-modal-obrir1" class="form-submit ">
+					</div>
+					<div id="finestra-modal-obrir1" class="form-submit ">
 						<button class="quiz-enviar">REGISTRARTE</button>
-					</div>	
-							
-					<span><a id="finestra-modal-obrir1" class="finestra-modal-obrir1 boto1">ABRIR</a></span>									
+					</div>
+
+					<span><a id="finestra-modal-obrir1" class="finestra-modal-obrir1 boto1">ABRIR</a></span>
 				</div>
 			</form>
 		</div>
-<!-- 		<div id=""> 
+		<!-- <div id="">
 			<div id="finestra-modal1" class="finestra-modal1 js-mostrar1">
-			  <div class="finestra-modal__contingut1">        
-			      <div id="finestra-modal-tancar1" class="finestra-modal-tancar1 boto1">×</div>    
+			  <div class="finestra-modal__contingut1">
+			      <div id="finestra-modal-tancar1" class="finestra-modal-tancar1 boto1">×</div>
 
 			      	<div>Registrate</div>
 					<form id="register-form">
@@ -76,12 +77,12 @@
 						<div>
 							<button type="submit" class="register-enviar" >ENVIAR</button>
 						</div>
-					</form>			      		
-			       </div>   
+					</form>
+			       </div>
 			  </div>
-			</div>			
+			</div>
 		</div> -->
-	
+
 	<script src="js/index.js"></script>
 	<script type="text/javascript">
 
@@ -92,7 +93,7 @@
 		// 	var $this = this;
 
 		// 	var data = new FormData(this);
-			
+
 		// 	var xHttp = new XMLHttpRequest();
 
 		// 	xHttp.open("POST","register.php");
@@ -154,10 +155,10 @@
 
 					xHttp.send(data);
 			    });
-				
+
 
 			},{scope: 'public_profile,email'});
-			
+
 		}
 
 	</script>

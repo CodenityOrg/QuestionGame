@@ -1,4 +1,4 @@
-<?php 
+<?php
 	$name = isset($_SESSION["name"])? $_SESSION["name"]:"";
 	$email = isset($_SESSION["email"])? $_SESSION["email"]:"";
 
@@ -13,7 +13,7 @@
 			<button>LOGIN</button>
 		<?php } else { ?>
 			<div>
-				<p style="color:white;" class="fullname"> <?= $_SESSION['name'] ?>  <?= $_SESSION['lastname'] ?> </p>
+				<p style="color:white;" class="fullname"> <?= $_SESSION['name'] ?> </p>
 			</div>
 			<div>
 				<p><a style="" href="logout.php">Logout</a></p>

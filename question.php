@@ -11,7 +11,7 @@
 
       include 'config/db.php';
 
-      session_start();
+      //session_start();
 
       $lastQuestion = isset($_SESSION["lastQuestion"])? $_SESSION["lastQuestion"]:"";
 
@@ -41,14 +41,14 @@
 </head>
 <body>
 
-  <form id = "question-form" method="post" action="verification_answer.php">
-      Title: <input type="hidden" id = "question_id" name="question_id" value=<?php echo $question["id"]; ?>> <?php echo $question["title"]; ?>
+      <?php include 'include/navbar.php'; ?>
+<?php echo  "email   :  " . $_SESSION["email"] . "<br>";  ?>      
 <?php echo  "Score actual:  " . $_SESSION["current_score"] . "<br>";  ?>
 <?php echo  "Score: -------" . $_SESSION["score"]; ?>
 
-  <form method="post" action="verification_answer.php">
-      Title: <input type="text" name="question_id" value=<?php echo $question["id"]; ?>> <?php echo $question["title"]; ?>
-      <?php include 'include/navbar.php'; ?>
+  <form id= "question-form" method="post" action="verification_answer.php">
+    <br>
+      Title: <input type="hidden" id = "question_id" name="question_id" value=<?php echo $question["id"]; ?>> <?php echo $question["title"]; ?>
       <br><br>
       Options:
 
@@ -62,31 +62,6 @@
     </form>
   <script type="text/javascript">
 
-  		// var options = document.getElementsByClassName('options');
-  		// for(var i = 0; i < options.length; i++) {
-      //       var option = options[i];
-      //       option.onclick = function() {
-      //       	debugger;
-      //       	var option_id = Number(this.getAttribute("data-id"));
-      //       	var question_id = Number(document.getElementById("question_id").value);
-      //
-      //       	var data = {
-      //       		question_id : question_id,
-      //       		option_id : option_id
-      //       	};
-      //
-			// 	var xHttp = new XMLHttpRequest();
-			// 	xHttp.onreadystatechange  = function() {
-			// 		if (this.readyState == 4 && this.status == 200) {
-			// 			location.reload();
-			// 	 	}
-			// 	}
-			// 	xHttp.open("POST","verification_answer.php");
-			// 	xHttp.setRequestHeader("Content-type", "application/json");
-			// 	xHttp.send(data);
-      //
-      //       }
-      //   }
 //--------------------------------------------------------------------------------------------------
 		document.getElementById("question-form").addEventListener("submit",function(e) {
       e.preventDefault();
@@ -103,10 +78,9 @@
 
       }
       debugger;
-      var data = {
-            		question_id : question_id,
-            		option_id : option_id
-      };
+      var data = new FormData();
+      data.append('question_id', question_id);
+      data.append('option_id', option_id);
 
 			var xHttp = new XMLHttpRequest();
 			xHttp.onreadystatechange  = function() {
@@ -122,7 +96,7 @@
         }
 			}
       xHttp.open("POST","verification_answer.php");
-			xHttp.setRequestHeader("Content-type", "application/json");
+			//xHttp.setRequestHeader("Content-type", "application/json");
 			xHttp.send(data);
 
 		});
