@@ -36,33 +36,72 @@
 <html>
 <head>
 	<title></title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <style type="text/css">
+    .container{
+      height: 100%;
+    }
+    .questionary{
+      padding: 0px 150px;
+    }
 
+    .questionary .title{
+      font-size: 65px;
+    }
+
+    .questionary .option{
+      background: #168863;
+      cursor: pointer;
+      padding: 20px;
+      font-size: 25px;
+      margin: 15px;
+      color: white;
+      border-radius: 10px;
+    }
+
+    .questionary .label{
+      font-size: 30px;
+    }
+
+    .response{
+      width: 100%;
+    }
+    .response *{
+      font-size: 20px;
+    }
+
+  </style>
 </head>
 <body>
 
-      <?php include 'include/navbar.php'; ?>
-<?php echo  "email   :  " . $_SESSION["email"] . "<br>";  ?>      
-<?php echo  "Score actual:  " . $_SESSION["current_score"] . "<br>";  ?>
-<?php echo  "Score: -------" . $_SESSION["score"]; ?>
+  <div class="container">
+  <?php   include 'include/navbar.php';   ?>
 
-  <form id= "question-form" method="post" action="verification_answer.php">
-    <br>
-      Title: <input type="hidden" id = "question_id" name="question_id" value=<?php echo $question["id"]; ?>> <?php echo $question["title"]; ?>
-      <br><br>
-      Options:
+  <div class="questionary">
+    <form id="question-form" method="post" action="verification_answer.php">
+      <input type="hidden" id = "question_id" name="question_id" value=<?= $question["id"]; ?>>
+      <h1 class="title" align="center"> <?= $question["title"]; ?></h1>
+      <p class="label">Options:</p>
+      <br>
 
-    	<?php
-    		foreach ($options as $option) {
-    			echo "<br> <input type='radio' id='option_id' name='option_id'  value=" . $option["id"] . ">" . $option["title"] . "";
-    		}
-    	 ?>
+    	<?php foreach ($options as $option): ?>
+          <div class="option">
+            <input type='radio' id='option_id' name='option_id'  value=" <?= $option["id"] ?>"> <?= $option["title"]; ?>
+          </div>
+    	<?php endforeach; ?>
+
       <br><br>
-      <input type="submit" name="submit" value="Submit"> -->
+      <div class="response">
+          <input class="btn btn-large" type="submit" name="submit" value="Verificar">
+
+      </div>
     </form>
+  </div>
+  </div>
   <script type="text/javascript">
 
-//--------------------------------------------------------------------------------------------------
+
 		document.getElementById("question-form").addEventListener("submit",function(e) {
       e.preventDefault();
       e.stopPropagation();

@@ -1,10 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Hind');
+
+
 *{	
 	margin:0;
 	padding: 0;
-
+  font-family: 'Hind', sans-serif;
 }
+
+a{
+  color: white;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.btn{
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 50px;
+  background: #397d9e;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+#fb-login{
+  background: #4a6ea9;
+}
+
+.input{
+  border-radius: 5px;
+}
+
 .header-encabezado{
-	background: black;
+	background: #397d9e;
 	height: 10%;	
 }
 .header-quiz{
@@ -34,11 +78,9 @@
 }
 .content{
 	width: 50%;	
-	background: #2F2F2F;
 }
 .login{
 	width: 50%;
-	background-color: #2F2F2F;
 	display: flex;
 	justify-content: center;
 	text-align: center;
@@ -52,14 +94,20 @@
   height: 29px;
   width: 275px; 
 }
-.form-submit button{
-	color: white;
-    background: #000000;
-    cursor: pointer;
-    border: none;
-    margin-bottom: 10px;
-    height: 40px;
-    width: 135px;
+
+.btn-medium{
+  width: 150px;
+}
+
+.btn-large{
+  width: 300px;
+}
+
+
+
+.form-submit input{
+  height: 30px;
+  width: 260px;
 }
 
 /*MODAL*/
@@ -153,12 +201,4 @@ button.register-enviar {
     font-size: 22px;
     padding: 10px;
 }
-input[type="password"] {
-    height: 30px;
-    width: 260px;
-}
-input[type="text"] {
-    height: 30;
-    height: 30px;
-    width: 260px;
-}
+

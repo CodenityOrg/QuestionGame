@@ -31,20 +31,22 @@
 			<form method="POST" action="login.php">
 				<div class="checkName">
 					<div class="form-submit">
-						<button id="fb-login">FACEBOOK</button>
+						<button class="btn" id="fb-login">
+							<img width="20" height="20" src="img/facebook.ico">
+							<span>INICIAR SESION CON FACEBOOK</span>
+						</button>
 					</div>
 					<div class="form-style">
-						<input type="email" name="email" placeholder="Email">
+						<input class="input" type="email" name="email" placeholder="Email">
 					</div>
 					<div class="form-style">
-						<input type="password" name="password" placeholder="Contrasena">
+						<input class="input" type="password" name="password" placeholder="Contrasena">
 					</div>
 					<div class="form-submit">
-						<input type="submit" id="login" value="Login" />
-						<button class="quiz-enviar">INICIAR</button>
+						<button class="btn btn-medium">INICIAR SESION</button>
 					</div>
-					<div id="finestra-modal-obrir1" class="form-submit ">
-						<button class="quiz-enviar">REGISTRARTE</button>
+					<difv id="finestra-modal-obrir1" class="form-submit ">
+						<button class="btn btn-medium">REGISTRARTE</button>
 					</div>
 
 					<span><a id="finestra-modal-obrir1" class="finestra-modal-obrir1 boto1">ABRIR</a></span>
