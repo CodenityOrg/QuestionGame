@@ -33,7 +33,7 @@
 					<div class="form-submit">
 						<button class="btn" id="fb-login">
 							<img width="20" height="20" src="img/facebook.ico">
-							<span>INICIE SESION CON FACEBOOK</span>
+							<span>INICIAR SESION CON FACEBOOK</span>
 						</button>
 					</div>
 					<div class="form-style">

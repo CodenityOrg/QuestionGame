@@ -47,15 +47,15 @@
     }
 
     .questionary .title{
-      font-size: 70px;
+      font-size: 65px;
     }
 
     .questionary .option{
-      background: green;
+      background: #168863;
       cursor: pointer;
       padding: 20px;
       font-size: 25px;
-      margin: 5px;
+      margin: 15px;
       color: white;
       border-radius: 10px;
     }
