@@ -36,9 +36,9 @@
 			<div class="nav nav-options">
 				<ul>
 					<li><p> <b><?= $_SESSION['name'] ?>  <?= $_SESSION['lastname'] ?></b>  </p></li>
-					<li><p>Mi Score : <b><?= $_SESSION['current_score'] ?></b>  </p></li>
-					<li><p>Actual Score: <b><?= $_SESSION['score'] ?></b>  </p></li>
-					<li><p><a href="ranking.php">Ranking</a></p></li>
+					<li><p>Mi Score : <b><?= $_SESSION['current_score'] ?> pts</b>  </p></li>
+<!-- 					<li><p>Actual Score: <b><?= $_SESSION['score'] ?></b>  </p></li>
+ -->					<li><p><a href="ranking.php">Ranking</a></p></li>
 					<li><p><b><a style="" href="logout.php">Cerrar sesión</a></b></p></li>
 				</ul>
 			</div>
