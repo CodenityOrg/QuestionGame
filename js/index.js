@@ -44,7 +44,7 @@ function fblogin() {
 
 		},{scope: 'public_profile,email'});
 
-	}	
+	}
 }
 
 function navResponsive() {
@@ -58,7 +58,7 @@ function navResponsive() {
 }
 
 function questionForm() {
-	
+
 	document.getElementById("question-form").addEventListener("submit",function(e) {
       e.preventDefault();
       e.stopPropagation();
@@ -81,13 +81,13 @@ function questionForm() {
 			var xHttp = new XMLHttpRequest();
 			xHttp.onreadystatechange  = function() {
 				if (this.readyState == 4 && this.status == 200) {
-            alert("CORRECTO");
-            //console.log("CORRECTO");
-            //debugger;
+
             location.reload();
 			 	}
         else if (this.readyState == 4 && this.status == 503) {
-            alert("INCORRECTO");
+            //alert("INCORRECTO");
+						var btnmodal = document.getElementById('register2');
+						btnmodal.click();
             //console.log("INCORRECTO");
         }
 			}
@@ -97,5 +97,3 @@ function questionForm() {
 
 	});
 }
-
-		

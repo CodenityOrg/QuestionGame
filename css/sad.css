@@ -7,8 +7,17 @@
     height: 100vh;
     background: rgba(0,0,0,0.7);
     display: flex;
+    visibility: hidden;
+    position: absolute;
 }
+.js-mostrar2{
+  visibility: visible;
 
+}
+.modalclose2{
+  visibility: hidden;
+
+}
 .info-sad {
     width: 60%;
     height: 350px;

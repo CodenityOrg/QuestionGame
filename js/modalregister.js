@@ -5,9 +5,24 @@ var modalclose = document.getElementById('btn-cerrar');
 
 btnmodal.addEventListener('click',function(){
     modalbg.classList.toggle('js-mostrar1');
-    
+
 })
 
 modalclose.addEventListener('click',function(){
     modalclose.classList.toggle('modalclose1');
+})
+//MODAL DESERTOR
+
+var btnmodal2 = document.getElementById('register2');
+var modalbg2 = document.getElementById('finestra-modal2');
+var modalclose2 = document.getElementById('btn-cerrar2');
+
+
+btnmodal2.addEventListener('click',function(){
+    modalbg2.classList.toggle('js-mostrar1');
+
+})
+
+modalclose2.addEventListener('click',function(){
+    modalclose2.classList.toggle('modalclose1');
 })

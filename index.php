@@ -5,7 +5,6 @@
 	<?php include 'include/head.php'; ?>
 <body>
 	<?php include 'include/navbar.php'; ?>
-<h1>GBYHNHU</h1>
 		<div class="conteiner">
 		<div class="content">
 			<h1 class="title-quiz">quizApp</h1>
