@@ -1,47 +1,23 @@
-<?php 
+<?php
 	$name = isset($_SESSION["name"])? $_SESSION["name"]:"";
 	$email = isset($_SESSION["email"])? $_SESSION["email"]:"";
 
  ?>
- <style type="text/css">
- 	
- 	.header-quiz p{
- 		color: white;
- 	}
-
- 	.nav-options > ul > li{
- 		display: inline-block;
- 		padding: 10px;
- 	}
-
- 	.nav-options{
- 		line-height: 50px;
- 	}
-
- 	nav .btn{
- 		margin-top: 10px;
- 		background: #0f5561;
- 	}
-
- </style>
 
  <header class="header-encabezado">
-	<nav class="header-quiz">
-		<div class="">
-			<img  width="50" height="50" style="margin:5px;" class="" src="https://media.freepik.com/accounts/img/badges/favorites_gold.svg">
-		</div>
+	<nav class="nav-options" id="myTopnav">
+		<a href=""><img  width="40" height="40" style="margin:0px 20px;padding: 0;" class="" src="https://media.freepik.com/accounts/img/badges/favorites_gold.svg"></a>
+
 		<?php if (!$email): ?>
-			<button class="btn btn-medium ">LOGIN</button>
+			<a href=""><button class="btn btn-medium ">LOGIN</button></a>
 		<?php else:?>
-			<div class="nav nav-options">
-				<ul>
-					<li><p> <b><?= $_SESSION['name'] ?>  <?= $_SESSION['lastname'] ?></b>  </p></li>
-					<li><p>Mi Score : <b><?= $_SESSION['current_score'] ?> pts</b>  </p></li>
-<!-- 					<li><p>Actual Score: <b><?= $_SESSION['score'] ?></b>  </p></li>
- -->					<li><p><a href="ranking.php">Ranking</a></p></li>
-					<li><p><b><a style="" href="logout.php">Cerrar sesión</a></b></p></li>
-				</ul>
-			</div>
+			
+			<a style="" href="logout.php"><b>Cerrar sesión</b></a></p></li>
+			<a href="ranking.php"><p>Ranking</p></a>
+			<a href="#"> <p>Mi Score : <b><?= $_SESSION['current_score'] ?> pts</b>  </p></a>
+			<a href=""><p> <b><?= $_SESSION['name'] ?>  <?= $_SESSION['lastname'] ?></b>  </p></a> 
+		    <a class="icon" onclick="navResponsive()" href="javascript:void(0);"  >&#9776;</a>
+				
 		<?php endif; ?>
 	</nav>
 </header>

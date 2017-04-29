@@ -1,23 +1,9 @@
-<?php 
+<?php include 'middleware/logged.php'; ?>
 
-	session_start();
-
-	$email = isset($_SESSION["email"])? $_SESSION["email"]:"";
-	if($email) {
-		header('location:question.php');
-		die();
-	}
- ?>
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>quizApp</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>	
-	
-	
+	<?php include 'include/head.php'; ?>
+<body>
 	<?php include 'include/navbar.php'; ?>
 
 	<div class="conteiner">
@@ -26,9 +12,9 @@
 			<p class="parrafo-quiz">Esta aplicacion mejora tu capacidad de responder preguntas rapidamente y con esta aplicacion web aprenderas cosas nuevas sobre cultura general</p>
 			<p class="parrafo-quiz">Esta aplicacion mejora tu capacidad de responder preguntas rapidamente y con esta aplicacion web aprenderas cosas nuevas sobre cultura general</p>
 			<p class="parrafo-quiz">Esta aplicacion mejora tu capacidad de responder preguntas rapidamente y con esta aplicacion web aprenderas cosas nuevas sobre cultura general</p>
-		</div>	
-		<div class="login">			
-			<form method="POST">
+		</div>
+		<div class="login">
+			<form method="POST" action="login.php">
 				<div class="checkName">
 					<div class="form-submit">
 						<button class="btn" id="fb-login">
@@ -44,19 +30,19 @@
 					</div>
 					<div class="form-submit">
 						<button class="btn btn-medium">INICIAR SESION</button>
-					</div>			
+					</div>
 					<difv id="finestra-modal-obrir1" class="form-submit ">
 						<button class="btn btn-medium">REGISTRARTE</button>
-					</div>	
-							
-					<span><a id="finestra-modal-obrir1" class="finestra-modal-obrir1 boto1">ABRIR</a></span>									
+					</div>
+
+					<span><a id="finestra-modal-obrir1" class="finestra-modal-obrir1 boto1">ABRIR</a></span>
 				</div>
 			</form>
 		</div>
-<!-- 		<div id=""> 
+		<!-- <div id="">
 			<div id="finestra-modal1" class="finestra-modal1 js-mostrar1">
-			  <div class="finestra-modal__contingut1">        
-			      <div id="finestra-modal-tancar1" class="finestra-modal-tancar1 boto1">×</div>    
+			  <div class="finestra-modal__contingut1">
+			      <div id="finestra-modal-tancar1" class="finestra-modal-tancar1 boto1">×</div>
 
 			      	<div>Registrate</div>
 					<form id="register-form">
@@ -79,13 +65,12 @@
 						<div>
 							<button type="submit" class="register-enviar" >ENVIAR</button>
 						</div>
-					</form>			      		
-			       </div>   
+					</form>
+			       </div>
 			  </div>
-			</div>			
+			</div>
 		</div> -->
-	
-	<script src="js/index.js"></script>
+	<?php include 'include/scripts.php'; ?>
 	<script type="text/javascript">
 
 		// document.getElementById("register-form").addEventListener("submit",function(e) {
@@ -95,7 +80,7 @@
 		// 	var $this = this;
 
 		// 	var data = new FormData(this);
-			
+
 		// 	var xHttp = new XMLHttpRequest();
 
 		// 	xHttp.open("POST","register.php");
@@ -128,41 +113,9 @@
 	     js.src = "//connect.facebook.net/en_US/sdk.js";
 	     fjs.parentNode.insertBefore(js, fjs);
 	   }(document, 'script', 'facebook-jssdk'));
+
+	  fblogin();
 	</script>
-	<script type="text/javascript">
-
-		document.getElementById("fb-login").onclick = function(e) {
-			e.preventDefault();
-			e.stopPropagation();
-
-
-
-			FB.login(function(response){
-				FB.api('/me?fields=id,email,first_name,last_name', function(response) {
-			      	debugger;
-					var data = new FormData(this);
-					data.append("facebookId",response.id);
-					data.append("name",response.first_name);
-					data.append("lastname",response.last_name);
-					data.append("email",response.email);
-					var xHttp = new XMLHttpRequest();
-
-					xHttp.open("POST","login.php");
-
-					xHttp.onreadystatechange  = function() {
-						if (this.readyState == 4 && this.status == 200) {
-							location.reload();
-					 	}
-					}
-
-					xHttp.send(data);
-			    });
-				
-
-			},{scope: 'public_profile,email'});
-			
-		}
-
-	</script>
+	
 </body>
 </html>

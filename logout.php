@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 	session_start();
 
 	unset($_SESSION['email']);
-	header('location:main.php');
+	header('location:index.php');
 
  ?>
