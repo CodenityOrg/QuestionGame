@@ -1,19 +1,21 @@
-*{	
+*{
 	margin:0;
 	padding: 0;
 
 }
 
+
+	 
 .header-encabezado{
 	background: black;
-	height: 10%;	
+	height: 10%;
 }
 .header-quiz{
 	display: flex;
     justify-content: space-between;
     width: 90%;
     margin: auto;
-    padding: 10px;    
+    padding: 10px;
 }
 .quiz{
 	height: 80px;
@@ -33,11 +35,11 @@
 	color: white;
 }
 .conteiner{
-	display: flex;		
+	display: flex;
 	height: 88vh;
 }
 .content{
-	width: 50%;	
+	width: 50%;
 	background: #2F2F2F;
 }
 
@@ -99,7 +101,7 @@
 }
 .boto1:hover {
   text-decoration: none;
-    
+
 }
 .boto1:active, .boto1:focus {
   outline: none;
@@ -133,10 +135,10 @@
 }
 
 .finestra-modal__contingut1 {
-    position: relative;  
+    position: relative;
     width: 280px;
-    text-align: center;  
-    background-color: white;  
+    text-align: center;
+    background-color: white;
     height: 70%;
     box-sizing: border-box;
     padding: 0 15px;
@@ -278,12 +280,12 @@ nav .btn{
     .finestra-modal__contingut1 {
         width: 350px;
     }
-    
+
     .login {
         width: 450px;
     }
 }
 
 @media screen and (min-width: 767px) {
-   
+
 }

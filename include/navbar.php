@@ -11,13 +11,13 @@
 		<?php if (!$email): ?>
 			<a href=""><button class="btn btn-medium ">LOGIN</button></a>
 		<?php else:?>
-			
+
 			<a style="" href="logout.php"><b>Cerrar sesión</b></a></p></li>
 			<a href="ranking.php"><p>Ranking</p></a>
 			<a href="#"> <p>Mi Score : <b><?= $_SESSION['current_score'] ?> pts</b>  </p></a>
-			<a href=""><p> <b><?= $_SESSION['name'] ?>  <?= $_SESSION['lastname'] ?></b>  </p></a> 
+			<a href=""><p> <b><?= $_SESSION['name'] ?> </b>  </p></a> 
 		    <a class="icon" onclick="navResponsive()" href="javascript:void(0);"  >&#9776;</a>
-				
+
 		<?php endif; ?>
 	</nav>
 </header>
