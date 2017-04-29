@@ -5,8 +5,8 @@
 	<?php include 'include/head.php'; ?>
 <body>
 	<?php include 'include/navbar.php'; ?>
-
-	<div class="conteiner">
+<h1>GBYHNHU</h1>
+		<div class="conteiner">
 		<div class="content">
 			<h1 class="title-quiz">quizApp</h1>
 			<p class="parrafo-quiz">Esta aplicacion mejora tu capacidad de responder preguntas rapidamente y con esta aplicacion web aprenderas cosas nuevas sobre cultura general</p>
@@ -116,6 +116,6 @@
 
 	  fblogin();
 	</script>
-	
+
 </body>
 </html>
