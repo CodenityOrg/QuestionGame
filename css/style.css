@@ -66,11 +66,10 @@ a:active {
 	text-align: center;
 	margin-bottom: 50px;
 	margin-top: 50px;
-	color: white;
+	
 }
 .parrafo-quiz{
-	margin: 30px;
-	color: white;
+	margin: 30px;	
 }
 .conteiner{
 	display: flex;
@@ -230,7 +229,7 @@ nav .btn{
 .nav-options a:not(:first-child) {float: right;}
 
 @media screen and (max-width: 600px) {
-  .nav-options a:not(:first-child) {display: none;}
+  .nav-options a:not(:first-child) {/*display: none;*/}
   .nav-options a.icon {
     float: right;
     display: block !important;
