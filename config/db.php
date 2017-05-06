@@ -7,7 +7,7 @@
 
 	try{
 		$query ="mysql:host=".HOST.";port=3306;dbname=".DB;
-		$con = new PDO("mysql:host=".HOST.";port=3306;dbname=".DB,USERNAME,PASSWORD);
+		$con = new PDO("mysql:host=".HOST.";port=3306;charset=UTF8;dbname=".DB,USERNAME,PASSWORD);
 	} catch(PDOException $e) {
         echo '<p>'.$e->getMessage().'</p>';
 	    exit;

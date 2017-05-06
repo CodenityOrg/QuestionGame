@@ -21,7 +21,7 @@
         <?php include 'include/navbar.php';   ?>
 
         <div class="questionary">
-          <form id="question-form" method="post" action="verification_answer.php">
+          <form accept-charset="utf-8" id="question-form" method="post" action="verification_answer.php">
             <input type="hidden" id = "question_id" name="question_id" value=<?= $question["id"]; ?>>
             <h1 class="title" align="center"> <?= $question["title"]; ?></h1>
             <p class="label">Options:</p>
