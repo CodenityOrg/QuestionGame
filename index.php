@@ -6,15 +6,45 @@
 <body>
 	<?php include 'include/navbar.php'; ?>
 		<div class="conteiner">
-		<div class="content">
-			<h1 class="title-quiz">quizApp</h1>
-			<p class="parrafo-quiz">Esta aplicacion mejora tu capacidad de responder preguntas rapidamente y con esta aplicacion web aprenderas cosas nuevas sobre cultura general</p>
-			<p class="parrafo-quiz">Esta aplicacion mejora tu capacidad de responder preguntas rapidamente y con esta aplicacion web aprenderas cosas nuevas sobre cultura general</p>
-			<p class="parrafo-quiz">Esta aplicacion mejora tu capacidad de responder preguntas rapidamente y con esta aplicacion web aprenderas cosas nuevas sobre cultura general</p>
-		</div>
-		<div class="login">
+			<div class="modal__login" id="modal__login">
+       <div class="login__in">
+            <h1>INICIA SESIÓN</h1>
+           <div class="modal__close" id="modal__close">
+               <p>X</p>
+           </div>
+           <button class="btn-face" ><img width="20" height="20" src="img/facebook.ico">
+							<span>INICIAR CON FACEBOOK</span></button>
+           <form action="">
+               <input type="text" name="email" class="input" placeholder="EMAIL">
+               <input type="password" name="password" class="input" placeholder="PASSWORD">
+               <button class="start">INICIAR</button>
+               <a href="">¿Olvidaste tu contraseña?</a>
+           </form>
+       		</div>
+   		</div>
+			<div class="learn__1">
+        <p>APRENDE Y DIVIERTETE CON INTERESANTES PREGUNTAS !</p>
+        <button class="inicia" id="start__login">INICIA</button>
+        <div class="materias">
+            <div class="opt__img">
+                <h2>CIENCIA</h2>
+                <div class="img0"></div>
+            </div>
+            <div class="opt__img">
+                <h2>HISTORIA</h2>
+                <div class="img0"></div>
+            </div>
+            <div class="opt__img">
+                <h2>MATEMATICA</h2>
+                <div class="img0"></div>
+            </div>
+        </div>
+        <p>Y MUCHO MAS !</p>
+    	</div>
+			<div class="login">
 			<form method="POST" action="login.php">
 				<div class="checkName">
+				    <h1>INICIA SESIÓN</h1>
 					<div class="form-submit">
 						<button class="btn" id="fb-login">
 							<img width="20" height="20" src="img/facebook.ico">
@@ -25,18 +55,19 @@
 						<input class="input" type="email" name="email" placeholder="Email">
 					</div>
 					<div class="form-style">
-						<input class="input" type="password" name="password" placeholder="Contrasena">
+						<input class="input" type="password" name="password" placeholder="Contraseña">
 					</div>
 					<div class="form-submit">
 						<button class="btn btn-medium">INICIAR SESION</button>
 					</div>
-					<difv id="finestra-modal-obrir1" class="form-submit ">
+					<div id="finestra-modal-obrir1" class="form-submit ">
 						<button class="btn btn-medium">REGISTRARTE</button>
-					</div>
-
-					<span><a id="finestra-modal-obrir1" class="finestra-modal-obrir1 boto1">ABRIR</a></span>
+				    </div>
+				    <a href="">¿ Olvidaste tu contraseña ?</a>
 				</div>
 			</form>
+        </div>
+
 		</div>
 		<!-- <div id="">
 			<div id="finestra-modal1" class="finestra-modal1 js-mostrar1">
@@ -70,6 +101,7 @@
 			</div>
 		</div> -->
 	<?php include 'include/scripts.php'; ?>
+	<script src="js/modallogin.js"></script>
 	<script type="text/javascript">
 
 		// document.getElementById("register-form").addEventListener("submit",function(e) {
