@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Hind');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Hind', sans-serif;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background: #235c79;
+}
+/*encabezado*/
+.header-encabezado{
+	background: #397d9e;
+	height: 10%;
+  width: 100%;
+}
+
+/*fin encabezado*/
+.learn__1 {
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    display: inline-block;
+    color: #fff;
+}
+.inicia {
+    width: 150px;
+    height: 45px;
+    color: #fff;
+    font-size: 20px;
+    background: #256e8f;
+    border: 0;
+    border-radius: 15px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+.inicia:hover {
+    background: #95a5a6;
+}
+.learn__1 p {
+    width: 100%;
+    margin:20px auto;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.materias {
+    width: 90%;
+    margin: auto;
+}
+.materias h2 {
+    font-size: 20px;
+}
+.materias .opt__img {
+    margin: 10px auto;
+    width: 100%;
+    display: inline-block;
+}
+.opt__img .img0 {
+    width: 70%;
+    height: 200px;
+    margin: auto;
+    border: 2px solid white;
+}
+/*login del index.php*/
+.login {
+    display: none;
+    width: 400px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 50px;
+}
+
+.login form {
+    margin: auto;
+    width: 90%;
+    background: #1395c9;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.7);
+    text-align: center;
+}
+.checkName h1 {
+    color: #fff;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+}
+.login .chekName {
+    display: flex;
+}
+.form-submit .btn {
+    width: 100%;
+    height: 35px;
+    background: #3b5998;
+    color: #fff;
+    margin: 10px auto;
+    border: 0;
+}
+.form-style input {
+    width: 100%;
+    margin: 5px auto;
+    height: 35px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    border-radius: 8px;
+}
+.checkName a {
+    color: #fff;
+    font-size: 20px;
+}
+/*modal de inicio----*/
+.modal__login {
+    position: absolute;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    width: 100%;
+    height: 100vh;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.lookmodal {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s;
+}
+.login__in {
+    width: 280px;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 10px;
+    background: #1395c9;
+    border-radius: 8px;
+}
+
+.modal__close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 29%;
+    right: 18%;
+    display: flex;
+    border: 3px solid;
+    color: red;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.modal__close p {
+    margin: auto;
+    color: red;
+    ;
+}
+.login__in h1 {
+    font-size: 20px;
+    margin: 15px auto;
+}
+.login__in .btn-face {
+    width: 230px;
+    height: 35px;
+    background: #385998;
+    border: 0;
+    color: #fff;
+}
+.login__in form .input {
+    width: 90%;
+    height: 30px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+.login__in .start {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 10px 0;
+    background: #1f789d;
+    color: #fff;
+    border: 0;
+}
+.login__in a {
+    color: #fff;
+}
+
+@media screen and (min-width: 767px){
+    .materias {
+        width: 700px;
+    }
+    .materias .opt__img {
+        width: 200px;
+    }
+    .opt__img .img0 {
+        width: 90%;
+    }
+}
+@media screen and (min-width: 950px) {
+    .inicia {
+        display: none;
+    }
+    .login {
+        display: inline-block;
+    }
+}
