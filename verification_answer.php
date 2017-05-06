@@ -13,7 +13,7 @@
 
     unset($_SESSION["lastQuestion"]);
 
-
+    
     if($question["answer"]){
         $_SESSION["current_score"]++;
 
