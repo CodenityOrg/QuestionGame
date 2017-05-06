@@ -18,6 +18,7 @@ function fblogin() {
 		e.preventDefault();
 		e.stopPropagation();
 
+		debugger;
 
 
 		FB.login(function(response){
