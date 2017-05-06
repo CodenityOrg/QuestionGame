@@ -11,7 +11,7 @@
         <div class="sad-close" >
           <h1>X</h1>
         </div>
-        <p>MALA SUERTE A LA PRÓXIMA CAMPEÓN :(</p>
+        <p>MAS SUERTE A LA PRÓXIMA CAMPEÓN :(</p>
         <button id="btn-cerrar2" class="sad-btn1">INTENTAR DE NUEVO</button>
         <!-- <button class="sad-btn2">VOLVAMOS AL PRINCIPIO</button> -->
       </div>

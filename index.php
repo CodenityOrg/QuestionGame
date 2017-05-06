@@ -12,7 +12,7 @@
            <div class="modal__close" id="modal__close">
                <p>X</p>
            </div>
-           <button class="btn-face" id="fb-login"><img width="20" height="20" src="img/facebook.ico">
+           <button class="btn-face" ><img width="20" height="20" src="img/facebook.ico">
 							<span>INICIAR CON FACEBOOK</span></button>
            <form action="">
                <input type="text" name="email" class="input" placeholder="EMAIL">
