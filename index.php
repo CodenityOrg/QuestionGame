@@ -25,6 +25,7 @@
 	<?php include 'include/navbar.php'; ?>
 <!------------MATERIAS------------------------------------->
 		<div class="conteiner__index">
+		<div class="frugos">
 		<!--INFO del CUERPO-->
 			
    		<!--INFO del CUERPO-->
@@ -80,6 +81,7 @@
 				</div>
 			</form>
         </div>
+		</div>
 <!----------LOGIN--FIN------------------------------------->
 		</div>
 		<!-- <div id="">
