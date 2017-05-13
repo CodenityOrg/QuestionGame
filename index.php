@@ -68,7 +68,8 @@
 			
    		<!--INFO del CUERPO-->
 			<div class="learn__1">
-        <h2>APRENDE Y DIVIERTETE CON INTERESANTES PREGUNTAS !</h2>
+        <h4 class="titledurazno">APRENDE Y DIVIERTETE CON</h4>
+        <h4 class="titledurazno">INTERESANTES PREGUNTAS !</h4>
         <button class="inicia" id="start__login">INICIA</button>
         <button id="open__register">regitrarte</button>
         <div class="materias">

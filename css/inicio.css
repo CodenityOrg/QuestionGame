@@ -194,10 +194,21 @@
         width: 90%;
     }
 }
+.frugos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titledurazno{
+    font-size: 3.3em;
+}
 @media screen and (min-width: 950px) {
     .conteiner__index {
         width: 95%;
         margin: 20px auto;
+        height: 100vh;
+        display: flex;
+        align-items: center;
     }
     .inicia {
         display: none;
