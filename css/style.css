@@ -45,6 +45,9 @@ a:active {
 
 #fb-login{
   background: #4a6ea9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .input{
