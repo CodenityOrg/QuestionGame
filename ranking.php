@@ -1,6 +1,8 @@
 <?php
-
+    
     include 'config/db.php';
+
+    session_start();
 
     $ranking =  "SELECT name, score FROM users ORDER BY score DESC LIMIT 10";
 
@@ -93,7 +95,7 @@
       @media screen and (min-width: 1000px){
 
         .ranking-item{
-          margin: 15px 100px;
+          margin: 15px 250px;
         }
         .title{
           font-size: 60px;
@@ -116,7 +118,15 @@
           <div class="ranking-content">
           <div class="ranking-profile">
             <img width="50" class="user-profile" height="50" src="img/placeholder.jpg">
-            <img class="prize" src="img/bronze-medal.svg">
+            <?php if ($key==0): ?>
+                <img class="prize" src="img/trophy.svg">          
+            <?php endif ?>
+            <?php if ($key==1): ?>
+                <img class="prize" src="img/silver-medal.svg">                        
+            <?php endif ?>
+            <?php if ($key==2): ?>
+                <img class="prize" src="img/bronze-medal.svg">          
+            <?php endif ?>
             </div>
             <div class="ranking-user-name">
               <?php echo $rank["name"] ?> - <?php echo $rank["score"] ?> puntos

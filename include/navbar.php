@@ -1,7 +1,6 @@
 <?php
 	$name = isset($_SESSION["name"])? $_SESSION["name"]:"";
 	$email = isset($_SESSION["email"])? $_SESSION["email"]:"";
-
  ?>
 
  <header class="header-encabezado">
