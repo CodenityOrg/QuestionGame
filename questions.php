@@ -1,5 +1,5 @@
-<?php 
-
+<?php
+      header('Content-Type: text/html; charset=utf-8');
       session_start();
 
       $email = isset($_SESSION["email"])? $_SESSION["email"]:"";
@@ -28,7 +28,7 @@
       $consult->execute();
 
       $options = $consult->fetchAll();
-
+      
       $_SESSION["lastQuestion"] = $question["id"];
 
  ?>

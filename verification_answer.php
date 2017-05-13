@@ -3,6 +3,7 @@
     include 'config/db.php';
     session_start();
     $option_id = $_POST["option_id"];
+
     $question_id = $_POST["question_id"];
 
     $sql =  "SELECT answer FROM options WHERE id = " . $option_id . " and question_id = " . $question_id;
@@ -16,6 +17,9 @@
     
     if($question["answer"]){
         $_SESSION["current_score"]++;
+        $questions = $_SESSION["current_questions"];
+        array_push($questions,$question_id);
+        $_SESSION["current_questions"] = $questions;
 
         if ($_SESSION["current_score"]>$_SESSION["score"]) {
           $_SESSION["score"] = $_SESSION["current_score"];

@@ -11,6 +11,7 @@
         <div class="sad-close" >
           <h1>X</h1>
         </div>
+
         <p>MAS SUERTE A LA PRÓXIMA CAMPEÓN :(</p>
         <button id="btn-cerrar2" class="sad-btn1">INTENTAR DE NUEVO</button>
         <!-- <button class="sad-btn2">VOLVAMOS AL PRINCIPIO</button> -->
@@ -21,10 +22,10 @@
         <?php include 'include/navbar.php';   ?>
 
         <div class="questionary">
-          <form id="question-form" method="post" action="verification_answer.php">
+          <form accept-charset="utf-8" id="question-form" method="post" action="verification_answer.php">
             <input type="hidden" id = "question_id" name="question_id" value=<?= $question["id"]; ?>>
             <h1 class="title" align="center"> <?= $question["title"]; ?></h1>
-            <p class="label">Options:</p>
+            <!--<p class="label">Options:</p>-->
             <br>
 
           	<?php foreach ($options as $option): ?>
@@ -33,9 +34,17 @@
                 </div>
           	<?php endforeach; ?>
 
-            <br><br>
+            <br>
             <div class="response">
-                <input class="btn btn-large" type="submit" name="submit" value="Verificar">
+                <input class="btn btn-large" type="submit" name="submit" value="CONTINUAR">
+                <div class="triangulo_der"></div>
+            </div>
+            <br>
+            <div class="style-boton">
+              <img class="facebook-img" src="img/fb.png">
+              <div class="share-fb">
+                  <span>Share on Facebook</span>
+              </div>
             </div>
           </form>
         </div>

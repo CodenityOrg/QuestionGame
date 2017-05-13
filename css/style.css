@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Hind');
-
+@font-face {
+    font-family: "NombreFont";
+    src: url(../font/sf-atarian-system.regular.ttf);
+}
 
 *{
 	margin:0;
 	padding: 0;
   font-family: 'Hind', sans-serif;
+  font-family: "NombreFont";
 }
 
 a{
@@ -88,6 +92,7 @@ a:active {
 	align-items: center;
 	font-size: 25px;
 }
+/*
 .form-style input{
 	border:1px solid #060606;
   padding: 6px;
@@ -98,7 +103,7 @@ a:active {
 
 .btn-medium{
   width: 150px;
-}
+}*/
 
 .btn-large{
   width: 300px;
@@ -231,7 +236,7 @@ nav .btn{
 .nav-options a:not(:first-child) {float: right;}
 
 @media screen and (max-width: 600px) {
-  .nav-options a:not(:first-child) {display: none;}
+  .nav-options a:not(:first-child) {/*display: none;*/}
   .nav-options a.icon {
     float: right;
     display: block !important;
@@ -242,7 +247,7 @@ nav .btn{
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px){
   .nav-options.responsive {position: relative;}
   .nav-options.responsive a.icon {
     position: absolute;
@@ -260,22 +265,31 @@ nav .btn{
       height: 100%;
     }
     .questionary{
-      padding: 0px 150px;
+      /*padding: 0px 150px;*/
     }
 
     .questionary .title{
       font-size: 65px;
+      color: #397d9e;
+          text-transform: uppercase;
+    font-weight: bold;
     }
-
+    .questionary .option:hover{
+      background-color: #168863;
+    }
     .questionary .option{
-      background: #168863;
+      background: #397d9e;
       cursor: pointer;
       padding: 20px;
-      width: 100%;
-      font-size: 25px;
-      margin: 15px;
+      width: 70%;
+      font-size: 25px;      
       color: white;
       border-radius: 10px;
+      box-shadow: 5px 5px 1px #BBBBBD;
+      margin:auto;
+      margin-bottom: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
     }
 
     .questionary .label{
@@ -284,7 +298,77 @@ nav .btn{
 
     .response{
       width: 100%;
+      display: flex;
+      justify-content: flex-end;
     }
     .response *{
       font-size: 20px;
     }
+
+input.btn.btn-large {
+    background: #FF3910;
+    width: 65%;
+    box-shadow: 5px 5px 1px #BBBBBD;
+    font-weight: bold;
+}
+
+.style-boton {
+    background: #3B5998;
+    color: white;
+    width: 59%;
+    margin-bottom: 10px;
+    height: 44px;
+    margin-left: 60px;
+    text-align: center;
+    font-size: 17px;
+    margin: auto;
+    display: flex;
+    margin-bottom: 30px;
+}
+img.facebook-img{
+      width: 25px;
+    margin: auto;
+    margin-top: 10px;
+    margin-right: -3px;
+}
+.share-fb {
+    margin: auto;
+}
+
+.triangulo_der {
+    width: 10px;
+    height: 0px;
+    border-top: 15.5px solid transparent;
+    border-left: 23px solid #fff;
+    border-bottom: 15.5px solid transparent;
+    position: absolute;
+    margin-top: 16px;
+    /* background-color: white; */
+    /* color: white; */
+}
+
+@media (min-width: 1024px) { 
+  .questionary .option{
+    width: 35%;
+    height: 35%;
+  }  
+  input.btn.btn-large{
+    width: 23%;
+    height:65px;
+  }
+  .style-boton{
+    width: 23%;
+    height:58px;
+    font-size: 24px;
+  }
+  img.facebook-img {
+    width: 36px;
+  }
+  input.btn.btn-large {
+    font-size: 37px;
+  }
+  input.btn.btn-large {
+    font-size: 29px;
+  }
+}
+
