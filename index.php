@@ -21,7 +21,7 @@
            </form>
        		</div>
    		</div>
-<!-------fin --del modal-----------FIN-------------------------------->
+<!-------fin --del modal-----------FIN------------------------------>
 	<?php include 'include/navbar.php'; ?>
 <!------------MATERIAS------------------------------------->
 		<div class="conteiner__index">
