@@ -3,17 +3,16 @@
 <!DOCTYPE html>
 <html>
 	<?php include 'include/head.php'; ?>
-<body>
-	<?php include 'include/navbar.php'; ?>
-		<div class="conteiner">
-			<div class="modal__login" id="modal__login">
+<body style="background-image: url(img/rect4359.png); background-size:100vw 100vh">
+<!----------IMODAL DE LOGIN--------------------------------------->
+    <div class="modal__login" id="modal__login">
        <div class="login__in">
             <h1>INICIA SESIÓN</h1>
            <div class="modal__close" id="modal__close">
                <p>X</p>
            </div>
            <button class="btn-face" ><img width="20" height="20" src="img/facebook.ico">
-							<span>INICIAR CON FACEBOOK</span></button>
+				<span>INICIAR CON FACEBOOK</span></button>
            <form action="">
                <input type="text" name="email" class="input" placeholder="EMAIL">
                <input type="password" name="password" class="input" placeholder="PASSWORD">
@@ -22,8 +21,15 @@
            </form>
        		</div>
    		</div>
+<!-------fin --del modal-----------FIN-------------------------------->
+	<?php include 'include/navbar.php'; ?>
+<!------------MATERIAS------------------------------------->
+		<div class="conteiner__index">
+		<!--INFO del CUERPO-->
+			
+   		<!--INFO del CUERPO-->
 			<div class="learn__1">
-        <p>APRENDE Y DIVIERTETE CON INTERESANTES PREGUNTAS !</p>
+        <h2>APRENDE Y DIVIERTETE CON INTERESANTES PREGUNTAS !</h2>
         <button class="inicia" id="start__login">INICIA</button>
         <div class="materias">
             <div class="opt__img">
@@ -39,9 +45,10 @@
                 <div class="img0"></div>
             </div>
         </div>
-        <p>Y MUCHO MAS !</p>
+        <h2>Y MUCHO MAS !</h2>
     	</div>
-			<div class="login">
+<!----------LOGIN--------------------------------------->
+        <div class="login__main">
 			<form method="POST" action="login.php">
 				<div class="checkName">
 				    <h1>INICIA SESIÓN</h1>
@@ -58,16 +65,16 @@
 						<input class="input" type="password" name="password" placeholder="Contraseña">
 					</div>
 					<div class="form-submit">
-						<button class="btn btn-medium">INICIAR SESION</button>
+						<button class="btn btn-medium" id="btn__down">INICIAR SESION</button>
 					</div>
 					<div id="finestra-modal-obrir1" class="form-submit ">
-						<button class="btn btn-medium">REGISTRARTE</button>
+						<button class="btn btn-medium" id="btn__down">REGISTRARTE</button>
 				    </div>
 				    <a href="">¿ Olvidaste tu contraseña ?</a>
 				</div>
 			</form>
         </div>
-
+<!----------LOGIN--FIN------------------------------------->
 		</div>
 		<!-- <div id="">
 			<div id="finestra-modal1" class="finestra-modal1 js-mostrar1">
