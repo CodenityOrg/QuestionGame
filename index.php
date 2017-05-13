@@ -3,14 +3,14 @@
 <!DOCTYPE html>
 <html>
 	<?php include 'include/head.php'; ?>
-<body style="background-image: url(img/rect4359.png); background-size:100vw 100vh">
-<?php include 'include/navbar.php'; ?>
+<body style="background-image: url(img/rect4359.png); background-size:100vw 100%">
+    <?php include 'include/navbar.php'; ?>
 <!----------MODAL REGISTER--INICIO-------------------------->		
 		
-    <div class="conteiner__modalregister" id="bg__register">
+    <div class="conteiner__modalregister" id="bgregister">
         <div class="modal__register">
               <div class="info__register">
-			      <div id="register__close" class="register__close">×</div>
+			      <div id="registerclose" class="register__close">×</div>
 
 			     <h1>REGISTRATE</h1> 	
 					<form class="register__form">
@@ -34,7 +34,7 @@
 							<button type="submit" class="register__enviar" >ENVIAR</button>
 						</div>
 					</form>
-                 </div>
+            </div>
         </div>
     </div>
 <!----------REGISTER--FIN------------------------------------->
@@ -62,14 +62,14 @@
 	
 <!------------MATERIAS------------------------------------->
     
-		<div class="conteiner__index">
+<div class="conteiner__index">
 		<!--INFO del CUERPO-->
 			
    		<!--INFO del CUERPO-->
 			<div class="learn__1">
         <h2>APRENDE Y DIVIERTETE CON INTERESANTES PREGUNTAS !</h2>
         <button class="inicia" id="start__login">INICIA</button>
-        <button id="open__register">regitrarte</button>
+        <button id="openregister">regitrarte</button>
         <div class="materias">
             <div class="opt__img">
                 <h2>CIENCIA</h2>
@@ -121,7 +121,7 @@
         </div>
 <!----------LOGIN--FIN------------------------------------->
     
-		</div>
+</div>
 		
 
 	<?php include 'include/scripts.php'; ?>

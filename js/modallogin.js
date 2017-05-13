@@ -12,14 +12,14 @@ modalclose.addEventListener('click',function(){
 })
 
 //para mostrar modal register
-var btnregister = document.getElementById('open__register');
-var modalregister = document.getElementById('bg__register');
-var closeregister = document.getElementById('register__close');
+var btnregister = document.getElementById('openregister');
+var modalregister = document.getElementById('bgregister');
+var closeregister = document.getElementById('registerclose');
 
 btnregister.addEventListener('click',function(){
-    modalregister.classList.toggle('mostrar__register');
+    modalregister.classList.toggle('lookregister');
 })
 
 closeregister.addEventListener('click',function(){
-    modalregister.classList.toggle('mostrar__register');
+    modalregister.classList.toggle('lookregister');
 })

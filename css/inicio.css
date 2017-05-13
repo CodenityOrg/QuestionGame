@@ -99,7 +99,7 @@
 }
 /*modal de inicio-----------------------*/
 .conteiner__modallogin {
-    position: relative;
+    position: absolute;
 }
 .modal__login {
     position: fixed;

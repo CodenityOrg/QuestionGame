@@ -26,3 +26,15 @@ btnmodal2.addEventListener('click',function(){
 modalclose2.addEventListener('click',function(){
     modalclose2.classList.toggle('modalclose1');
 })
+//para mostrar modal register
+var btnregister = document.getElementById('open__register');
+var modalregister = document.getElementById('bgregister');
+var closeregister = document.getElementById('registerclose');
+
+btnregister.addEventListener('click',function(){
+    modalregister.classList.toggle('lookregister');
+})
+
+closeregister.addEventListener('click',function(){
+    modalregister.classList.toggle('lookregister');
+})

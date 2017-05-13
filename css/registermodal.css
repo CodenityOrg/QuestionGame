@@ -1,11 +1,7 @@
 .conteiner__modalregister {
-    position: relative;
-    
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.5s;
+    position: absolute;
 }
-.mostrar__register {
+.lookregister {
     visibility: visible;
     opacity: 1;
     transition: all 0.5s;
@@ -16,6 +12,10 @@
     background: rgba(0,0,0,0.5);
     position: fixed;
     display: flex;
+    
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
 }
 .info__register {
     width: 85%;
