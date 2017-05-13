@@ -1,13 +1,25 @@
 <?php
 	$name = isset($_SESSION["name"])? $_SESSION["name"]:"";
 	$email = isset($_SESSION["email"])? $_SESSION["email"]:"";
-
  ?>
+ <header class="header__main">
+        <div class="head__logo">
+            <a href="/">
+                <img src="https://media.freepik.com/accounts/img/badges/favorites_gold.svg">
+            </a>
+        </div>
+        <div class="opt__register">
+            <a href="" id="open__register">REGISTRATE</a>
+        </div>
+</header>
 
+<!--MOMENTO 
  <header class="header-encabezado">
+ 
 	<nav class="nav-options" id="myTopnav">
 		<a href="/"><img  width="40" height="40" style="margin:0px 20px;padding: 0;" class="" src="https://media.freepik.com/accounts/img/badges/favorites_gold.svg"></a>
 
+		
 		<?php if (!$email): ?>
 			<a href=""><button class="btn btn-medium ">LOGIN</button></a>
 		<?php else:?>
@@ -21,3 +33,4 @@
 		<?php endif; ?>
 	</nav>
 </header>
+PLEASE-->
