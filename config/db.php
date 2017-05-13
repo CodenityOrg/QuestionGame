@@ -3,7 +3,7 @@
 	define("DB", "quiz");
 	define("HOST","127.0.0.1");
 	define("USERNAME", "root");
-	define("PASSWORD","");
+	define("PASSWORD","casita");
 
 	try{
 		$query ="mysql:host=".HOST.";port=3306;dbname=".DB;
