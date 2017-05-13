@@ -51,11 +51,12 @@ a:active {
   border-radius: 5px;
   
 }
-
+/*
 .header-encabezado{
 	background: #397d9e;
 	height: 10%;
 }
+*/
 .header-quiz{
 	display: flex;
     justify-content: space-between;
@@ -63,6 +64,7 @@ a:active {
     margin: auto;
     padding: 10px;
 }
+
 .quiz{
 	height: 80px;
 	width: 80px;

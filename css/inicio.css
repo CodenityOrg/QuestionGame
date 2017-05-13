@@ -1,9 +1,13 @@
+
+
+/*HEADER ----------------------------*/
+/*@import url(registermodal.css);*/
+/*///////////////////////////////////*/
 .conteiner__index {
     width: 100%;
 }
 .learn__1 {
     text-align: center;
-    
     display: inline-block;
     color: #fff;
     width: 100%;
@@ -93,9 +97,12 @@
     color: #fff;
     font-size: 20px;
 }
-/*modal de inicio----*/
+/*modal de inicio-----------------------*/
+.conteiner__modallogin {
+    position: relative;
+}
 .modal__login {
-    position: absolute;
+    position: fixed;
     background: rgba(0,0,0,0.7);
     display: flex;
     width: 100%;
