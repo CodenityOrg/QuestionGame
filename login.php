@@ -10,8 +10,6 @@
 	$password = isset($_REQUEST['password']) ? $_REQUEST['password']:'';
 	$facebook_id = isset($_REQUEST['facebookId'])? $_REQUEST['facebookId'] : '';
 
-	print_r($_REQUEST);
-
 
 	if($email&&$password){
 
@@ -37,6 +35,7 @@
 			$_SESSION["email"] = $row["email"];
 			$_SESSION["score"] = $row["score"];
 			$_SESSION["current_score"] = 0;
+			$_SESSION["current_questions"] = [];
 			header('Location: question.php');
 		}
 
@@ -71,6 +70,7 @@
 		$_SESSION["email"] = $email;
 		$_SESSION["score"] = $score? $score:0;
 		$_SESSION["current_score"] = 0;
+		$_SESSION["current_questions"] = [];
 
 		header('Location: index.php');
 	}else{

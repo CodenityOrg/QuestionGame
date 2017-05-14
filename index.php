@@ -4,8 +4,44 @@
 <html>
 	<?php include 'include/head.php'; ?>
 <body style="background-image: url(img/rect4359.png); background-size:100vw 100vh">
-	<!--IMODAL DE LOGIN->
-    <div class="modal__login" id="modal__login">
+<?php include 'include/navbar.php'; ?>
+<!----------MODAL REGISTER--INICIO-------------------------->		
+		
+    <div class="conteiner__modalregister" id="bg__register">
+        <div class="modal__register">
+              <div class="info__register">
+			      <div id="register__close" class="register__close">×</div>
+
+			     <h1>REGISTRATE</h1> 	
+					<form class="register__form">
+						<div class="form-register">
+							<p>Ingrese el Nombre</p>
+							<input type="text" name="name" placeholder="Nombre">
+						</div>
+						<div class="form-register">
+							<p>Ingrese el Apellido</p>
+							<input type="text" name="lastname" placeholder="Apellido">
+						</div>
+						<div class="form-register">
+							<p>Ingrese el Correo Electronico</p>
+							<input type="text" name="email" placeholder="Correo ELectronico">
+						</div>
+						<div class="form-register">
+							<p>Ingrese la Contrasena</p>
+							<input type="password" name="password" placeholder="Contrasena">
+						</div>
+						<div class="btns__register">
+							<button type="submit" class="register__enviar" >ENVIAR</button>
+						</div>
+					</form>
+                 </div>
+        </div>
+    </div>
+<!----------REGISTER--FIN------------------------------------->
+  
+   <!--IMODAL DE LOGIN--------------------------->
+    <div class="conteiner__modallogin">
+      <div class="modal__login" id="modal__login">
        <div class="login__in">
             <h1>INICIA SESION</h1>
            <div class="modal__close" id="modal__close">
@@ -19,18 +55,23 @@
                <button class="start">INICIAR</button>
                <a href="">¿Olvidaste tu contraseña?</a>
            </form>
-       		</div>
-   		</div>
-<!-------fin --del modal-----------FIN-------------------------------->
-	<?php include 'include/navbar.php'; ?>
+       	</div>
+   	</div>
+   	</div>
+<!-------fin --del modal-----------FIN------------------------------>
+	
 <!------------MATERIAS------------------------------------->
+    
 		<div class="conteiner__index">
+		<div class="frugos">
 		<!--INFO del CUERPO-->
 			
    		<!--INFO del CUERPO-->
 			<div class="learn__1">
-        <h2>APRENDE Y DIVIERTETE CON INTERESANTES PREGUNTAS !</h2>
+        <h4 class="titledurazno">APRENDE Y DIVIERTETE CON</h4>
+        <h4 class="titledurazno">INTERESANTES PREGUNTAS !</h4>
         <button class="inicia" id="start__login">INICIA</button>
+        <button id="open__register">regitrarte</button>
         <div class="materias">
             <div class="opt__img">
                 <h2>CIENCIA</h2>
@@ -80,39 +121,12 @@
 				</div>
 			</form>
         </div>
-<!----------LOGIN--FIN------------------------------------->
 		</div>
-		<!-- <div id="">
-			<div id="finestra-modal1" class="finestra-modal1 js-mostrar1">
-			  <div class="finestra-modal__contingut1">
-			      <div id="finestra-modal-tancar1" class="finestra-modal-tancar1 boto1">×</div>
+<!----------LOGIN--FIN------------------------------------->
+    
+		</div>
+		
 
-			      	<div>Registrate</div>
-					<form id="register-form">
-						<div class="form-register">
-							<p>Ingrese el Nombre</p>
-							<input type="text" name="name" placeholder="Nombre">
-						</div>
-						<div class="form-register">
-							<p>Ingrese el Apellido</p>
-							<input type="text" name="lastname" placeholder="Apellido">
-						</div>
-						<div class="form-register">
-							<p>Ingrese el Correo Electronico</p>
-							<input type="text" name="email" placeholder="Correo ELectronico">
-						</div>
-						<div class="form-register">
-							<p>Ingrese la Contrasena</p>
-							<input type="password" name="password" placeholder="Contrasena">
-						</div>
-						<div>
-							<button type="submit" class="register-enviar" >ENVIAR</button>
-						</div>
-					</form>
-			       </div>
-			  </div>
-			</div>
-		</div> -->
 	<?php include 'include/scripts.php'; ?>
 	<script src="js/modallogin.js"></script>
 	<script type="text/javascript">

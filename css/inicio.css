@@ -1,9 +1,13 @@
+
+
+/*HEADER ----------------------------*/
+/*@import url(registermodal.css);*/
+/*///////////////////////////////////*/
 .conteiner__index {
     width: 100%;
 }
 .learn__1 {
     text-align: center;
-    
     display: inline-block;
     color: #fff;
     width: 100%;
@@ -67,7 +71,7 @@
 }
 .form-submit .btn {
     width: 100%;
-    height: 35px;
+    <!--height: 35px;-->
     background: #3b5998;
     color: #fff;
     margin: 10px auto;
@@ -79,6 +83,7 @@
     height: 35px;
     box-sizing: border-box;
     padding: 0 10px;
+    font-size: 1.3em;
     border-radius: 5px;
     border: 1px solid #060606;
 }
@@ -87,15 +92,18 @@
     margin: 5px 0px;
     font-size: 20px;
     border-radius: 10px;
-    background: #0f5561;
+    background: #18779D;
 }
 .checkName a {
     color: #fff;
     font-size: 20px;
 }
-/*modal de inicio----*/
+/*modal de inicio-----------------------*/
+.conteiner__modallogin {
+    position: relative;
+}
 .modal__login {
-    position: absolute;
+    position: fixed;
     background: rgba(0,0,0,0.7);
     display: flex;
     width: 100%;
@@ -186,10 +194,21 @@
         width: 90%;
     }
 }
+.frugos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titledurazno{
+    font-size: 3.3em;
+}
 @media screen and (min-width: 950px) {
     .conteiner__index {
         width: 95%;
         margin: 20px auto;
+        height: 100vh;
+        display: flex;
+        align-items: center;
     }
     .inicia {
         display: none;
