@@ -4,10 +4,10 @@
 <html>
 	<?php include 'include/head.php'; ?>
 <body style="background-image: url(img/rect4359.png); background-size:100vw 100vh">
-<!----------IMODAL DE LOGIN--------------------------------------->
+	<!--IMODAL DE LOGIN->
     <div class="modal__login" id="modal__login">
        <div class="login__in">
-            <h1>INICIA SESIÓN</h1>
+            <h1>INICIA SESION</h1>
            <div class="modal__close" id="modal__close">
                <p>X</p>
            </div>
@@ -34,15 +34,21 @@
         <div class="materias">
             <div class="opt__img">
                 <h2>CIENCIA</h2>
-                <div class="img0"></div>
+                <div class="">
+                	<img width="100" height="100" src="img/flasks.svg">
+                </div>
             </div>
             <div class="opt__img">
                 <h2>HISTORIA</h2>
-                <div class="img0"></div>
+                <div class="">
+                	<img width="100" height="100" src="img/history.svg">
+                </div>
             </div>
             <div class="opt__img">
                 <h2>MATEMATICA</h2>
-                <div class="img0"></div>
+                <div class="">
+                	<img width="100" height="100" src="img/calculator.svg">
+                </div>
             </div>
         </div>
         <h2>Y MUCHO MAS !</h2>
@@ -51,7 +57,7 @@
         <div class="login__main">
 			<form method="POST" action="login.php">
 				<div class="checkName">
-				    <h1>INICIA SESIÓN</h1>
+				    <h1>INICIA SESION</h1>
 					<div class="form-submit">
 						<button class="btn" id="fb-login">
 							<img width="20" height="20" src="img/facebook.ico">
