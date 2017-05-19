@@ -1,11 +1,6 @@
 .conteiner__modalregister {
     position: absolute;
 }
-.lookregister {
-    visibility: visible;
-    opacity: 1;
-    transition: all 0.5s;
-}
 .modal__register {
     width: 100%;
     height: 100vh;
@@ -17,8 +12,13 @@
     opacity: 0;
     transition: all 0.5s;
 }
+.lookregister {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s;
+}
 .info__register {
-    width: 85%;
+    width: 70%;
     margin: auto;
     background: #1395c9;
     border-radius: 5px;
@@ -51,7 +51,7 @@
 }
 .form-register input {
     width: 100%;
-    height: 30px;
+    height: 40px;
     border-radius: 5px;
     box-sizing: border-box;
     padding: 0 10px;
@@ -65,4 +65,6 @@
     border: 0;
     color: #fff;
     cursor: pointer;
+    margin-top: 15px;
+    font-size: 20px;
 }

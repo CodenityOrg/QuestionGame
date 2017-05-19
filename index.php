@@ -4,30 +4,26 @@
 <html>
 	<?php include 'include/head.php'; ?>
 <body style="background-image: url(img/rect4359.png); background-size:100vw 100%">
-    <?php include 'include/navbar.php'; ?>
+   
 <!----------MODAL REGISTER--INICIO-------------------------->		
 		
-    <div class="conteiner__modalregister" id="bgregister">
-        <div class="modal__register">
+    <div class="conteiner__modalregister" >
+        <div class="modal__register" id="bgregister">
               <div class="info__register">
 			      <div id="registerclose" class="register__close">×</div>
 
 			     <h1>REGISTRATE</h1> 	
 					<form class="register__form">
 						<div class="form-register">
-							<p>Ingrese el Nombre</p>
 							<input type="text" name="name" placeholder="Nombre">
 						</div>
 						<div class="form-register">
-							<p>Ingrese el Apellido</p>
 							<input type="text" name="lastname" placeholder="Apellido">
 						</div>
 						<div class="form-register">
-							<p>Ingrese el Correo Electronico</p>
 							<input type="text" name="email" placeholder="Correo ELectronico">
 						</div>
 						<div class="form-register">
-							<p>Ingrese la Contrasena</p>
 							<input type="password" name="password" placeholder="Contrasena">
 						</div>
 						<div class="btns__register">
@@ -43,10 +39,9 @@
     <div class="conteiner__modallogin">
       <div class="modal__login" id="modal__login">
        <div class="login__in">
-            <h1>INICIA SESION</h1>
-           <div class="modal__close" id="modal__close">
-               <p>X</p>
-           </div>
+            
+           <div class="modal__close" id="modal__close">X</div>
+           <h1>INICIA SESION</h1>
            <button class="btn-face" ><img width="20" height="20" src="img/facebook.ico">
 				<span>INICIAR CON FACEBOOK</span></button>
            <form action="">
@@ -59,17 +54,19 @@
    	</div>
    	</div>
 <!-------fin --del modal-----------FIN------------------------------>
-	
+ <?php include 'include/navbar.php'; ?>
 <!------------MATERIAS------------------------------------->
     
 <div class="conteiner__index">
+		<div class="frugos">
 		<!--INFO del CUERPO-->
 			
    		<!--INFO del CUERPO-->
 			<div class="learn__1">
-        <h2>APRENDE Y DIVIERTETE CON INTERESANTES PREGUNTAS !</h2>
+        <h4 class="titledurazno">APRENDE Y DIVIERTETE CON</h4>
+        <h4 class="titledurazno">INTERESANTES PREGUNTAS !</h4>
         <button class="inicia" id="start__login">INICIA</button>
-        <button id="openregister">regitrarte</button>
+        <button class="inicia" id="openregister">regitrarte</button>
         <div class="materias">
             <div class="opt__img">
                 <h2>CIENCIA</h2>
@@ -119,6 +116,7 @@
 				</div>
 			</form>
         </div>
+		</div>
 <!----------LOGIN--FIN------------------------------------->
     
 </div>
