@@ -268,9 +268,11 @@ nav .btn{
 
 .container{
       height: 100%;
+      background-color: #FAFAFA;
     }
     .questionary{
       /*padding: 0px 150px;*/
+      margin-top: 35px;
     }
 
     .questionary .title{
@@ -278,6 +280,7 @@ nav .btn{
       color: #397d9e;
           text-transform: uppercase;
     font-weight: bold;
+    margin:0px;
     }
     .questionary .option:hover{
       background-color: #168863;
@@ -373,7 +376,9 @@ img.facebook-img{
     font-size: 37px;
   }
   input.btn.btn-large {
-    font-size: 29px;
+    font-size: 29px ;
   }
 }
-
+input#option_id {
+    visibility: hidden;
+}

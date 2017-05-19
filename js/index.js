@@ -13,6 +13,8 @@ function FinestraModal1(){
 }
 
 
+
+
 function fblogin() {
 	document.getElementById("fb-login").onclick = function(e) {
 		e.preventDefault();
@@ -43,58 +45,11 @@ function fblogin() {
 		    });
 
 
-		},{scope: 'public_profile,email'});
-
+            location.reload();
+	 	});
 	}
 }
 
-function navResponsive() {
-	debugger;
-    var x = document.getElementById("myTopnav");
-    if (x.className === "nav-options") {
-        x.className += " responsive";
-    } else {
-        x.className = "nav-options";
-    }
-}
 
-function questionForm() {
 
-	document.getElementById("question-form").addEventListener("submit",function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-			var $this = this;
-      var option_id;
-      var question_id = Number(document.getElementById("question_id").value);
-      var options = document.getElementsByName("option_id");
-      for(var i=0;i<options.length;i++)
-      {
-            if(options[i].checked){
-                option_id=Number(options[i].value);
-            }
 
-      }
-      debugger;
-      var data = new FormData();
-      data.append('question_id', question_id);
-      data.append('option_id', option_id);
-
-			var xHttp = new XMLHttpRequest();
-			xHttp.onreadystatechange  = function() {
-				if (this.readyState == 4 && this.status == 200) {
-
-            location.reload();
-			 	}
-        else if (this.readyState == 4 && this.status == 503) {
-            //alert("INCORRECTO");
-						var btnmodal = document.getElementById('register2');
-						btnmodal.click();
-            //console.log("INCORRECTO");
-        }
-			}
-      xHttp.open("POST","verification_answer.php");
-			//xHttp.setRequestHeader("Content-type", "application/json");
-			xHttp.send(data);
-
-	});
-}
