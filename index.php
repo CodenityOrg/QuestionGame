@@ -5,7 +5,7 @@
 	<?php include 'include/head.php'; ?>
 <body style="background-image: url(img/rect4359.png); background-size:100vw 100%">
    
-<!----------MODAL REGISTER--INICIO-------------------------->		
+<!------MODAL REGISTER--INICIO-------------------------->		
 		
     <div class="conteiner__modalregister" >
         <div class="modal__register" id="bgregister">
