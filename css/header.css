@@ -27,3 +27,11 @@
     width: 60px;
     margin-left: 5px;
 }
+@media screen and (min-width: 950px) {
+    .head__logo {
+        margin: 40px 40px;
+    }
+    .opt__register {
+        margin: 15px 40px;
+    }
+}
