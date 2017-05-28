@@ -9,7 +9,7 @@
             </a>
         </div>
         <div class="opt__register">
-            <a href="" id="open__register">REGISTRATE</a>
+            <a href="#" class="open-register-modal">REGISTRATE</a>
         </div>
 </header>
 

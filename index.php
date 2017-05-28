@@ -58,7 +58,7 @@
 <!------------MATERIAS------------------------------------->
     
 <div class="conteiner__index">
-    <div class="frugos">
+    <div class="container-principal">
 		<!--INFO del CUERPO-->
 			
    		<!--INFO del CUERPO-->
@@ -66,7 +66,7 @@
         <h4 class="titledurazno">APRENDE Y DIVIERTETE CON</h4>
         <h4 class="titledurazno">INTERESANTES PREGUNTAS !</h4>
         <button class="inicia" id="start__login">INICIA</button>
-        <button class="inicia" id="openregister">regitrarte</button>
+        <button class="inicia open-register-modal">REGISTRATE</button>
         <div class="materias">
             <div class="opt__img">
                 <h2>CIENCIA</h2>
@@ -110,7 +110,7 @@
 						<button class="btn btn-medium" id="btn__down">INICIAR SESION</button>
 					</div>
 					<div id="finestra-modal-obrir1" class="form-submit ">
-						<button class="btn btn-medium" id="btn__down">REGISTRARTE</button>
+						<button class="btn btn-medium open-register-modal" id="btn__down">REGISTRARTE</button>
 				    </div>
 				    <a href="">¿ Olvidaste tu contraseña ?</a>
 				</div>
