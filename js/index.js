@@ -40,6 +40,27 @@ function facebook() {
 }
 
 
+function registerForm() {
+
+	var registerForm = document.getElementById("register__form");
+
+	registerForm.onsubmit = function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+
+		var xHttp = new XMLHttpRequest();
+			xHttp.onreadystatechange  = function() {
+				if (this.readyState == 4 && this.status == 200) {
+            		location.reload();
+			 	}
+			}
+      	xHttp.open("POST","register.php");
+		xHttp.send(new FormData(this));
+	}
+
+}
+
+
 function fblogin() {
 	document.getElementById("fb-login").onclick = function(e) {
 		e.preventDefault();

@@ -35,7 +35,7 @@
 			      <div id="registerclose" class="register__close">×</div>
 
 			     <h1>REGISTRATE</h1> 	
-					<form class="register__form">
+					<form id="register__form">
 						<div class="form-register">
 							<input type="text" name="name" placeholder="Nombre">
 						</div>
@@ -146,6 +146,7 @@
 
 	<?php include 'include/scripts.php'; ?>
 	<script src="js/modallogin.js"></script>
+	<script type="text/javascript"> registerForm();</script>
 	<script type="text/javascript">
 
 		// document.getElementById("register-form").addEventListener("submit",function(e) {
