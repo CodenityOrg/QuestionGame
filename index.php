@@ -58,7 +58,7 @@
 <!------------MATERIAS------------------------------------->
     
 <div class="conteiner__index">
-		<div class="frugos">
+    <div class="frugos">
 		<!--INFO del CUERPO-->
 			
    		<!--INFO del CUERPO-->
@@ -116,7 +116,7 @@
 				</div>
 			</form>
         </div>
-		</div>
+    </div>
 <!----------LOGIN--FIN------------------------------------->
     
 </div>
