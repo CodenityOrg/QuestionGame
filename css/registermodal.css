@@ -17,6 +17,11 @@
     opacity: 1;
     transition: all 0.5s;
 }
+
+#register__form{
+    margin: 10px 40px;
+}
+
 .info__register {
     width: 70%;
     margin: auto;

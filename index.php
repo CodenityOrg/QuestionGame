@@ -24,6 +24,13 @@
 			margin-left: 50px;
 			margin-right: 50px;
 		}
+
+		@media screen and (min-width: 200px) and (max-width: 500px ) {
+			.info__register{
+			    width: 50%;				
+			}
+		}
+
 	</style>
 <body style="background-image: url(img/rect4359.png); background-size:100vw 100vh">
    
