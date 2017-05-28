@@ -3,6 +3,28 @@
 <!DOCTYPE html>
 <html>
 	<?php include 'include/head.php'; ?>
+	<style type="text/css">
+		.nav-options{
+		  background-color: transparent;
+		  overflow: hidden;
+		  line-height: 3.5;
+		}
+
+		.nav-options img{
+			width: 80px;
+			height: 80px;
+		}
+
+		.nav-options .btn-register{
+			background: transparent;
+			font-size: 25px;
+		}
+
+		.nav-options{
+			margin-left: 50px;
+			margin-right: 50px;
+		}
+	</style>
 <body style="background-image: url(img/rect4359.png); background-size:100vw 100vh">
    
 <!------MODAL REGISTER--INICIO-------------------------->		
