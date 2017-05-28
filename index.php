@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<?php include 'include/head.php'; ?>
-<body style="background-image: url(img/rect4359.png); background-size:100vw 100%">
+<body style="background-image: url(img/rect4359.png); background-size:100vw 100vh">
    
 <!------MODAL REGISTER--INICIO-------------------------->		
 		
