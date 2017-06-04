@@ -6,6 +6,7 @@
 	<meta http-equiv="Content-Type"
     content="text/html; charset=utf-8"
     />
+    <meta http-equiv="Pragma" content="no-cache">
 	<!--<link rel="stylesheet" type="text/css" href="css/inicio.css">-->
 	<link rel="stylesheet" type="text/css" href="css/inicio.css">
 	<link rel="stylesheet" type="text/css" href="css/header.css">
