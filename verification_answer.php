@@ -24,7 +24,6 @@
         if ($_SESSION["current_score"]>$_SESSION["score"]) {
           $_SESSION["score"] = $_SESSION["current_score"];
           $sql = "UPDATE users SET score= " . $_SESSION["score"] . " WHERE email=" . "'". $_SESSION["email"] ."'";
-          echo $sql;
           $consult = $con->prepare($sql);
           $consult->execute();
         }

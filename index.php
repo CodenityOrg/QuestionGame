@@ -3,6 +3,35 @@
 <!DOCTYPE html>
 <html>
 	<?php include 'include/head.php'; ?>
+	<style type="text/css">
+		.nav-options{
+		  background-color: transparent;
+		  overflow: hidden;
+		  line-height: 3.5;
+		}
+
+		.nav-options img{
+			width: 80px;
+			height: 80px;
+		}
+
+		.nav-options .btn-register{
+			background: transparent;
+			font-size: 25px;
+		}
+
+		.nav-options{
+			margin-left: 50px;
+			margin-right: 50px;
+		}
+
+		@media screen and (min-width: 200px) and (max-width: 500px ) {
+			.info__register{
+			    width: 50%;				
+			}
+		}
+
+	</style>
 <body style="background-image: url(img/rect4359.png); background-size:100vw 100vh">
    
 <!------MODAL REGISTER--INICIO-------------------------->		
@@ -13,7 +42,7 @@
 			      <div id="registerclose" class="register__close">×</div>
 
 			     <h1>REGISTRATE</h1> 	
-					<form class="register__form">
+					<form id="register__form">
 						<div class="form-register">
 							<input type="text" name="name" placeholder="Nombre">
 						</div>
@@ -58,7 +87,7 @@
 <!------------MATERIAS------------------------------------->
     
 <div class="conteiner__index">
-    <div class="frugos">
+    <div class="container-principal">
 		<!--INFO del CUERPO-->
 			
    		<!--INFO del CUERPO-->
@@ -66,7 +95,7 @@
         <h4 class="titledurazno">APRENDE Y DIVIERTETE CON</h4>
         <h4 class="titledurazno">INTERESANTES PREGUNTAS !</h4>
         <button class="inicia" id="start__login">INICIA</button>
-        <button class="inicia" id="openregister">regitrarte</button>
+        <button class="inicia open-register-modal">REGISTRATE</button>
         <div class="materias">
             <div class="opt__img">
                 <h2>CIENCIA</h2>
@@ -110,7 +139,7 @@
 						<button class="btn btn-medium" id="btn__down">INICIAR SESION</button>
 					</div>
 					<div id="finestra-modal-obrir1" class="form-submit ">
-						<button class="btn btn-medium" id="btn__down">REGISTRARTE</button>
+						<button class="btn btn-medium open-register-modal" id="btn__down">REGISTRARTE</button>
 				    </div>
 				    <a href="">¿ Olvidaste tu contraseña ?</a>
 				</div>
@@ -124,6 +153,7 @@
 
 	<?php include 'include/scripts.php'; ?>
 	<script src="js/modallogin.js"></script>
+	<script type="text/javascript"> registerForm();</script>
 	<script type="text/javascript">
 
 		// document.getElementById("register-form").addEventListener("submit",function(e) {

@@ -17,6 +17,11 @@
     opacity: 1;
     transition: all 0.5s;
 }
+
+#register__form{
+    margin: 10px 40px;
+}
+
 .info__register {
     width: 350px;
     margin: auto;
@@ -40,9 +45,12 @@
     text-align: center;
     margin-right: 10px;
     cursor: pointer;
+    border-radius: 50%;
+    padding: 10px;
 }
 .register__close:hover {
-    background: red;
+    background: white;
+    color: blue;
 }
 .register__form {
     width: 100%;

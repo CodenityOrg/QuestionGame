@@ -14,18 +14,9 @@ function FinestraModal1(){
 
 
 
-
-function fblogin() {
-	document.getElementById("fb-login").onclick = function(e) {
-		e.preventDefault();
-		e.stopPropagation();
-
-		debugger;
-
-
-		FB.login(function(response){
+function facebook() {
+	FB.login(function(response){
 			FB.api('/me?fields=id,email,first_name,last_name', function(response) {
-		      	debugger;
 				var data = new FormData(this);
 				data.append("facebookId",response.id);
 				data.append("name",response.first_name);
@@ -37,7 +28,7 @@ function fblogin() {
 
 				xHttp.onreadystatechange  = function() {
 					if (this.readyState == 4 && this.status == 200) {
-						location.reload();
+            			location.reload();
 				 	}
 				}
 
@@ -45,11 +36,81 @@ function fblogin() {
 		    });
 
 
-            location.reload();
 	 	});
+}
+
+
+function registerForm() {
+
+	var registerForm = document.getElementById("register__form");
+
+	registerForm.onsubmit = function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+
+		var xHttp = new XMLHttpRequest();
+			xHttp.onreadystatechange  = function() {
+				if (this.readyState == 4 && this.status == 200) {
+            		location.reload();
+			 	}
+			}
+      	xHttp.open("POST","register.php");
+		xHttp.send(new FormData(this));
+	}
+
+}
+
+
+function fblogin() {
+	document.getElementById("fb-login").onclick = function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+
+		facebook();
+		
 	}
 }
 
+function questionForm() {
+
+	document.getElementById("question-form").addEventListener("submit",function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+			var $this = this;
+      var option_id;
+      var question_id = Number(document.getElementById("question_id").value);
+      var options = document.getElementsByName("option_id");
+      for(var i=0;i<options.length;i++)
+      {
+            if(options[i].checked){
+                option_id=Number(options[i].value);
+            }
+
+      }
+      debugger;
+      var data = new FormData();
+      data.append('question_id', question_id);
+      data.append('option_id', option_id);
+
+			var xHttp = new XMLHttpRequest();
+			xHttp.onreadystatechange  = function() {
+				if (this.readyState == 4 && this.status == 200) {
+
+            location.reload();
+			 	}
+        else if (this.readyState == 4 && this.status == 503) {
+            //alert("INCORRECTO");
+						var btnmodal = document.getElementById('register2');
+						btnmodal.click();
+            //console.log("INCORRECTO");
+        }
+			}
+      xHttp.open("POST","verification_answer.php");
+			//xHttp.setRequestHeader("Content-type", "application/json");
+			xHttp.send(data);
+
+	});
+}
 
 
 

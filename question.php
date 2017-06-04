@@ -3,7 +3,7 @@
 
 <html>
     <link rel="stylesheet" href="css/sad.css">
-  <?php include 'include/head.php'; ?>
+    <?php include 'include/head.php'; ?>
 
   <body>
     <div class="conteiner-sad" id="finestra-modal2">

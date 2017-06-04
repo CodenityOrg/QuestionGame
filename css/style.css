@@ -16,19 +16,19 @@ a{
 }
 
 a:link {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 a:visited {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 a:hover {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 a:active {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .btn{
