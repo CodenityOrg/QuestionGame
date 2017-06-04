@@ -3,35 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<?php include 'include/head.php'; ?>
-	<style type="text/css">
-		.nav-options{
-		  background-color: transparent;
-		  overflow: hidden;
-		  line-height: 3.5;
-		}
-
-		.nav-options img{
-			width: 80px;
-			height: 80px;
-		}
-
-		.nav-options .btn-register{
-			background: transparent;
-			font-size: 25px;
-		}
-
-		.nav-options{
-			margin-left: 50px;
-			margin-right: 50px;
-		}
-
-		@media screen and (min-width: 200px) and (max-width: 500px ) {
-			.info__register{
-			    width: 50%;				
-			}
-		}
-
-	</style>
+	
 <body style="background-image: url(img/rect4359.png); background-size:100vw 100vh">
    
 <!------MODAL REGISTER--INICIO-------------------------->		
@@ -95,7 +67,7 @@
         <h4 class="titledurazno">APRENDE Y DIVIERTETE CON</h4>
         <h4 class="titledurazno">INTERESANTES PREGUNTAS !</h4>
         <button class="inicia" id="start__login">INICIA</button>
-        <button class="inicia open-register-modal">REGISTRATE</button>
+        <!--<button class="inicia open-register-modal">REGISTRATE</button>-->
         <div class="materias">
             <div class="opt__img">
                 <h2>CIENCIA</h2>
@@ -154,7 +126,7 @@
 	<?php include 'include/scripts.php'; ?>
 	<script src="js/modallogin.js"></script>
 	<script type="text/javascript"> registerForm();</script>
-	<script type="text/javascript">
+<!--	<script type="text/javascript">
 
 		// document.getElementById("register-form").addEventListener("submit",function(e) {
 		// 	e.preventDefault();
@@ -177,7 +149,7 @@
 		// 	xHttp.send(data);
 
 		// });
-	</script>
+	</script> -->
 	<script type="text/javascript">
 
 	  window.fbAsyncInit = function() {

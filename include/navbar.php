@@ -4,7 +4,7 @@
  ?>
  <header class="header__main">
     <nav class="nav-options" id="myTopnav">
-        <a href="/"><img  width="40" height="40" style="margin:0px 20px;padding: 0;" class="" src="https://media.freepik.com/accounts/img/badges/favorites_gold.svg"></a>
+        <a href="/"><img   class="" src="https://media.freepik.com/accounts/img/badges/favorites_gold.svg"></a>
 
         <?php if (!$email): ?>
             <a href=""><button class="btn btn-medium btn-register open-register-modal">REGISTRATE</button></a>

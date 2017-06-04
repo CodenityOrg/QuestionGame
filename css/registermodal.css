@@ -19,11 +19,12 @@
 }
 
 #register__form{
-    margin: 10px 40px;
+    margin: 10px auto;
+    width: 90%;
 }
 
 .info__register {
-    width: 350px;
+    width: 300px;
     margin: auto;
     background: #1395c9;
     border-radius: 5px;
@@ -46,7 +47,7 @@
     margin-right: 10px;
     cursor: pointer;
     border-radius: 50%;
-    padding: 10px;
+    padding: 5px;
 }
 .register__close:hover {
     background: white;
@@ -75,4 +76,9 @@
     cursor: pointer;
     margin-top: 15px;
     font-size: 20px;
+}
+@media screen and (min-width: 480px) {
+    .info__register {
+                width: 380px;
+            }
 }

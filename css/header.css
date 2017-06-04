@@ -1,35 +1,37 @@
 .header__main {
-    width: 100%;
+    width: 95%;
     height: 6em;
-}
-.head__logo {
-    width: 70px;
-    height: 4em;
-    float: left;
-    margin: 15px 15px;
-}
-.opt__register {
-    height: 5em;
-    float: right;
-    display: flex;
-    margin: 0 20px;
-}
-.opt__register a {
     margin: auto;
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
+    margin-bottom: 10px;
 }
 
-.head__logo img {
-    width: 60px;
-    margin-left: 5px;
+.nav-options img {
+    width: 80px;
+    height: 80px;
 }
+.nav-options{
+    background-color: transparent;
+    overflow: hidden;
+    /*line-height: 3.5;*/
+    width: 98%;
+    margin: auto;
+    padding: 15px 0;
+    box-sizing: border-box;
+}
+.nav-options .btn-register{
+    background: transparent;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
 @media screen and (min-width: 950px) {
     .head__logo {
         margin: 40px 40px;
     }
     .opt__register {
         margin: 15px 40px;
+    }
+    .nav-options {
+        width: 85%;
     }
 }

@@ -216,7 +216,7 @@ button.register-enviar {
 .header-quiz p{
     color: white;
   }
-
+/*
 .nav-options > a{
   float: left;
   display: block;
@@ -233,7 +233,7 @@ nav .btn{
   margin-top: 10px;
   background: #0f5561;
 }
-
+*/
 .icon{
     display: none !important;
 

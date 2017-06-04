@@ -7,11 +7,11 @@ var modalregister = document.getElementById('bgregister');
 var closeregister = document.getElementById('registerclose');
 
 btnmodal.addEventListener('click',function(){
-    modalbg.classList.toggle('lookmodal');
+    modalbg.classList.toggle('looklogin');
 })
 
 modalclose.addEventListener('click',function(){
-    modalbg.classList.toggle('lookmodal');
+    modalbg.classList.toggle('looklogin');
 });
 
 //para registro
