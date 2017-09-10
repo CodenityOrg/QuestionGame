@@ -10,7 +10,7 @@
             <a href=""><button class="btn btn-medium btn-register open-register-modal">REGISTRATE</button></a>
         <?php else:?>
 
-            <a style="" href="logout.php"><b>Cerrar sesión</b></a></p></li>
+            <a style="" href="logout.php"><b>Cerrar sesión</b></a></li>
             <a href="ranking.php"><p>Ranking</p></a>
             <a href="#"> <p>Mi Score : <b><?= $_SESSION['current_score'] ?> pts</b>  </p></a>
             <a href=""><p> <b><?= $_SESSION['name'] ?> </b>  </p></a> 
